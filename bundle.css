@@ -1,0 +1,47 @@
+.number {
+  font-family: Helvetica, '黑体';
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.tac {
+  text-align: center;
+}
+.modal-open-no-scroll {
+  position: fixed;
+  width: 100%;
+}
+@font-face {
+  font-family: "DIN-Bold";
+  src: url("../images/font/DIN-Bold.ttf") format("truetype");
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  font-style: normal;
+  font-weight: normal;
+}
+#c-mask {
+  position: fixed;
+  top: 0px ;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) center center no-repeat;
+  display: none;
+}
+/***rem转换方法****/
+.test {
+  color: #fff;
+}
+.ban {
+  font-size: 0.26666667rem;
+}
+

@@ -1,0 +1,14 @@
+module.exports={
+    'code':0000,
+    'number|2':1,
+    'success':true,
+    'data':{
+    	'list|5':[
+          {
+          	'name':'@name',
+          	'telephone':'1500000000',
+          	'email':'@email'
+          }
+    	]
+    }
+}

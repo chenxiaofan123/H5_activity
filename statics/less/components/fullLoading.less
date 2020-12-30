@@ -1,0 +1,93 @@
+.top {
+  width: 100%;
+  background-color: #fff;
+  filter: Alpha(Opacity=60);
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* display: none; */
+}
+
+#zj .x-list-height .borders{
+  border-bottom:1px solid #e0e0e0;
+}
+#zj .x-list-height2 .borders{
+  border-bottom:0;
+}
+.bar1 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.12;
+  -webkit-transform: rotate(0deg) translate(0, -40px);opacity:0.12;
+}
+.bar2 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.25;
+  -webkit-transform: rotate(45deg) translate(0, -40px);opacity:0.25;
+}
+.bar3 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.37;
+  -webkit-transform: rotate(90deg) translate(0, -40px);opacity:0.37;
+}
+.bar4 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.50;
+  -webkit-transform: rotate(135deg) translate(0, -40px);opacity:0.50;
+}
+.bar5 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.62;
+  -webkit-transform: rotate(180deg) translate(0, -40px);opacity:0.62;
+}
+.bar6 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.75;
+  -webkit-transform: rotate(225deg) translate(0, -40px);opacity:0.75;
+}
+.bar7 {
+  transform: rotate(0deg) translate(0, -40px);opacity:0.87;
+  -webkit-transform: rotate(270deg) translate(0, -40px);opacity:0.87;
+}
+.bar8 {
+  transform: rotate(315deg) translate(0, -40px);opacity:1;
+  -webkit-transform: rotate(315deg) translate(0, -40px);opacity:1;
+}
+
+#div2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 100px auto 0;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  animation: loading 1.3s infinite linear;
+  -webkit-animation: loading 1.3s infinite linear;
+
+}
+#div2 div {
+  width: 10px;
+  height: 30px;
+  background: #5d5d5d;
+  position: absolute;
+  top: 35px;
+  left: 45px;
+}
+
+#div2 div {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+}
+
+@keyframes loading {
+  from {
+    transform: scale(0.5) rotate(0deg);
+    -webkit-transform: scale(0.5) rotate(0deg);
+  }
+  to {
+    transform: scale(0.5) rotate(360deg);
+    -webkit-transform: scale(0.5) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  from {-webkit-transform:scale(0.5) rotate(0deg);}
+  to {-webkit-transform:scale(0.5) rotate(360deg);}
+}

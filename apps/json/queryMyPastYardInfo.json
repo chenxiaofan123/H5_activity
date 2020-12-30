@@ -1,0 +1,21 @@
+{
+  "data": {
+    "yardInfo":[
+        { 
+          "iswin":false,
+          "yard":"20160822"
+        },
+        {
+          "iswin":false,
+          "yard":"20001112"
+        },
+        {
+          "iswin":true,
+          "yard":"20001113"
+        } 
+    ]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

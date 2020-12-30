@@ -1,0 +1,81 @@
+
+{
+  "data":{
+    "recordList":[
+      {
+    "operationType":"买入黄金",
+    "goldWeight":10000,
+    "price":"23600",
+    "date":"2016-08-24 12:21:54"
+       },
+      {
+        "operationType":"卖出黄金",
+        "goldWeight":-10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },{
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      },
+      {
+        "operationType":"买入黄金",
+        "goldWeight":10000,
+        "price":"23600",
+        "date":"2016-08-24 12:21:54"
+      }
+    ]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

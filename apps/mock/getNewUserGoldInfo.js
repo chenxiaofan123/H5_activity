@@ -1,0 +1,9 @@
+module.exports={
+    'code':"0000",
+    'success':true,
+    'data':{
+    	depositType:'12012',
+    	marketPrice:31000,
+    	salePrice:24900
+    }
+}

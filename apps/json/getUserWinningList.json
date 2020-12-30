@@ -1,0 +1,63 @@
+
+{
+   "data":{
+   "winningList":[{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"1毫克红包",
+     "prizeType":9,
+     "status":0
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"5毫克红包",
+     "prizeType":1,
+      "status":1
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"2毫克红包",
+     "prizeType":12,
+     "status":2
+   },
+   {
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"1%",
+     "prizeType":21,
+     "status":0
+   },
+   {
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"0.5%加息券",
+     "prizeType":18,
+     "status":0
+   },
+   {
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"20克",
+     "prizeType":24,
+     "status":1
+   },
+   {
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"5%",
+     "prizeType":23,
+     "status":1
+   },
+   {
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"3%",
+     "prizeType":22,
+     "status":1
+   }
+   ]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

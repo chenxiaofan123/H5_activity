@@ -1,0 +1,35 @@
+{
+  "data": {
+    "yardInfoList":[
+      { 
+        "buyTime":"2016-08-23 16:58:30.238",
+        "yardInfo":[
+          {
+              "yard":"12340123",
+              "isWin":false
+          }, 
+          {
+              "yard":"00001234",
+              "isWin":true
+          }
+        ]
+      }, 
+      { 
+        "buyTime":"2016-08-23 12:58:30.238",
+        "yardInfo":[
+          {
+              "yard":"12340124",
+              "isWin":false
+          }, 
+          {
+              "yard":"00001235",
+              "isWin":false
+          }
+        ]
+      } 
+    ]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

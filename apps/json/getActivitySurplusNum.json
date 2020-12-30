@@ -1,0 +1,33 @@
+
+{
+  "data":{
+    "endTime": "测试内容72b8",
+    "num": 8800,
+    "receiverList": [
+      {
+        "mobile": "12343345454",
+        "weight": 10
+      },
+      {
+        "mobile": "12343345454",
+        "weight": 10
+      },
+      {
+        "mobile": "12343345454",
+        "weight": 10
+      },
+      {
+        "mobile": "12343345454",
+        "weight": 10
+      },
+      {
+        "mobile": "12343345454",
+        "weight": 10
+      }
+    ],
+    "status": 1
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

@@ -1,0 +1,22 @@
+
+{
+  "data":{
+    "topList":[
+      {
+        "phone":"15123233333",
+        "rewardAmount": 50000
+      },
+      {
+        "phone":"15123233333",
+        "rewardAmount": 50000
+      },
+      {
+        "phone":"15123233333",
+        "rewardAmount": 50000
+      }
+    ]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

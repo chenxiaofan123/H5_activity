@@ -1,0 +1,33 @@
+module.exports={
+    'code':"0000",
+    'success':true,
+    'data':{
+        investList:[
+          {
+              telephone:'150****2342',
+              investAmount:10000
+          },
+          {
+            telephone:'150****2342',
+            investAmount:10000
+        },
+        {
+            telephone:'150****2342',
+            investAmount:10000
+        },
+        {
+            telephone:'150****2342',
+            investAmount:10000
+        },
+        {
+            telephone:'150****2342',
+            investAmount:10000
+        },
+        {
+            telephone:'150****2342',
+            investAmount:10000
+        }
+        ]
+    },
+    "msg":"操作成功"
+}

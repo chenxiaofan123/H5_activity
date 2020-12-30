@@ -1,0 +1,65 @@
+ /*弹框*/
+ .frame-box {
+    min-width: 8.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5) center center no-repeat;
+    .frame-main {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .invite-info {
+        .px2rem(width,600);
+        .padding(76, 30, 40, 30);
+        background: #fff;
+        // box-shadow: 0 4px 20px 0 rgba(74, 74, 74, 0.26);
+        .borderradius1(20);
+        .pop_title{
+            span{
+                font-family: "DIN-Bold";
+                color:#FFDE3D;
+                .px2rem(font-size,62);
+            }
+        }
+        .button{
+            display: block;
+            .bg-img("popButton.png",540,80);
+            margin:0 auto;
+            .px2rem(line-height, 80);
+            color: #fff;
+            text-align: center;
+            .px2px(font-size, 30);
+            .px2rem(margin-top, 59);
+            text-decoration:none
+        }
+        p {
+            font-family: "Arita-CZS";
+            .px2px(font-size, 34);
+            color: #333;
+            .px2rem(padding-left, 20);
+            .px2rem(line-height, 50);
+        }
+        .Img{
+            .bg-img('qian.png', 100, 110);
+            position: absolute;
+            .px2rem(top, -20);
+            .px2rem(right, 40);
+        }
+        .close{
+              .bg-img('close.png', 42, 42);
+              position: absolute;
+              .px2rem(bottom, -101);
+              left:47%;
+              
+        }
+    }
+}

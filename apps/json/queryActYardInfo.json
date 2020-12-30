@@ -1,0 +1,23 @@
+{
+  "data": {
+        "actStatus": 4,
+        "lotteryName": "一元抢金条",
+        "lotteryNo": "160823",
+        "lotteryCode": "0001",
+        "yardPrice": 100,
+        "yardLimitNum": 102,
+        "yardSaleNum": 2900,
+        "yardTotalNum": 3000,
+        "myYardNum":10,
+        "winResult": {
+            "winIp": "111.17.202.***",
+            "winYard": "10001234",
+            "arrawWinYard":[1,0,0,0,1,2,3,4],
+            "winUserMobile": "186******96",
+            "buyNum": 100
+        }
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

@@ -1,0 +1,212 @@
+/***less公共的方法***/
+
+/***rem转换方法****/
+.px2rem(@name, @px){
+    @{name}: @px  / 75 * 1rem;
+}
+
+.px2px(@name, @px){
+    @{name}: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+      @{name}: @px * 1px;
+  }
+  // for mx3
+  [data-dpr="2.5"] & {
+      @{name}: round(@px * 2.5 / 2) * 1px;
+  }
+  // for 小米note
+  [data-dpr="2.75"] & {
+      @{name}: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+      @{name}: round(@px * 3 / 2 ) * 1px
+  }
+  // for 三星note4
+  [data-dpr="4"] & {
+      @{name}: @px * 2px;
+  }
+}
+
+.borderBottom(@px,@type, @color){
+  border-bottom-style: @type;
+  border-bottom-color:@color;
+  .px2px(border-bottom-width,@px);
+}
+.borderTop(@px,@type, @color){
+  border-top-style: @type;
+  border-top-color:@color;
+  .px2px(border-top-width,@px);
+}
+
+.backgroundSize(@x,@y){
+ // @{name}: round(@y / 2) * 1px;
+  [data-dpr="1"] & {
+    background-size: (@x/2)*1px (@y/2)*1px;
+  }
+  [data-dpr="2"] & {
+
+    background-size: @x*1px @y*1px;
+  }
+  // for mx3
+  [data-dpr="2.5"] & {
+    background-size: round(@x * 2.5 / 2) * 1px round(@y * 2.5 / 2) * 1px;
+  }
+  // for 小米note
+  [data-dpr="2.75"] & {
+    background-size: round(@x * 2.75 / 2) * 1px round(@y * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    background-size: round(@x * 3 / 2 ) * 1px round(@y * 3 / 2 ) * 1px;
+  }
+  // for 三星note4
+  [data-dpr="4"] & {
+    background-size: @x * 2px @y * 2px;
+  }
+}
+.backgroundPosition (@x,@y){
+  [data-dpr="1"] & {
+    background-position: (@x/2)*1px (@y/2)*1px;
+  }
+  [data-dpr="2"] & {
+    background-position: @x*1px @y*1px;
+  }
+  // for mx3
+  [data-dpr="2.5"] & {
+    background-position: round(@x * 2.5 / 2) * 1px round(@y * 2.5 / 2) * 1px;
+  }
+  // for 小米note
+  [data-dpr="2.75"] & {
+    background-position: round(@x * 2.75 / 2) * 1px round(@y * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    background-position: round(@x * 3 / 2 ) * 1px round(@y * 3 / 2 ) * 1px;
+  }
+  // for 三星note4
+  [data-dpr="4"] & {
+    background-position: @x * 2px @y * 2px;
+  }
+}
+//在含有fix顶等元素时，在页面less文件的开头添加如下以防止闪动
+.hasfixed(){
+        html,body{_background-image:url(about:blank);_background-attachment:fixed;}
+    }
+
+
+    // 透明度
+.opacity(@opacity){
+    /* older safari/Chrome browsers */  
+      -webkit-opacity: @opacity;  
+      /* Netscape and Older than Firefox 0.9 */  
+      -moz-opacity: @opacity;  
+      /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/  
+      -khtml-opacity: @opacity;  
+      /* IE9 + etc...modern browsers */  
+      opacity: @opacity;  
+      /* IE 4-9 */  
+      @opacityPercentage: @opacity * 100; 
+      -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opacityPercentage})"; 
+      filter: ~"alpha(opacity = @{opacityPercentage})";
+  }
+  // 单行文本 不折行 用...
+  .nobreak(){ 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow:hidden;  // 需要设置宽度
+    word-break:keep-all;
+    }
+    //断词处理
+  .nobreak(clip){
+    text-overflow: clip; 
+    white-space: normal;
+    overflow:hidden;  // 需要设置宽度
+    word-break:keep-all;
+  }
+  
+  //多行文本 低版本浏览器不支持
+  .multiline-nobreak(@line) {
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;    /**显示的行数***/
+   }
+  
+   //文本缩进
+   //文本缩进隐藏(可用于按钮,banner等位置背景图已有图片文字,保留文字作为seo优化?)
+   .indent(@indent:-200%){
+    text-indent: @indent;
+    overflow:hidden; ////推荐使用此方式,减少移动端重绘能耗,根据需要扩大倍数至-200%+
+   }
+   // 反向文字
+   .refont(){ direction: rtl; unicode-bidi: bidi-override;}
+  
+   
+  //圆角
+  .borderradius(@radius:2px) {
+    -moz-border-radius:@radius;
+    -webkit-border-radius:@radius;
+    border-radius:@radius;
+    background-clip:padding-box;
+  }
+  .borderradius1(@radius:2px) {
+    //兼容4.x 安卓不支持缩写
+    .px2rem(border-top-left-radius,@radius);
+    .px2rem(border-top-right-radius,@radius);
+    .px2rem(border-bottom-right-radius,@radius);
+    .px2rem(border-bottom-left-radius,@radius);
+    .px2rem(border-radius,@radius);
+    background-clip:padding-box;
+  }
+  
+  
+  .placeholder(@color){
+       /**placeholder 颜色***/
+       :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: @color;
+    }
+     ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: @color;
+    }
+    input:-ms-input-placeholder {
+         color: @color;
+    }
+    input::-webkit-input-placeholder {
+         color: @color;
+    }
+  }
+
+  .clearfix(){
+    *zoom:1;
+   &:before, &:after{ content:""; display:table; }
+   &:after{ clear: both; }
+  }
+
+  .background(@url){
+    background-image: url(@url);
+    background-size: 100% 100%;
+}
+
+ //定位简写
+ .ps() { position:static;}
+ .pr() { position:relative; *zoom:1;}
+ .pa() { position:absolute;}
+ .pf() { position:fixed;}
+ .po() { position:static; margin:0;}// 复位
+
+ .fl(){
+   float:left;
+ }
+ .fr(){
+   float:right;
+ }
+
+ .padding(@top,@right,@bottom,@left){
+  .px2rem(padding-top,@top);
+  .px2rem(padding-right,@right);
+  .px2rem(padding-bottom,@bottom);
+  .px2rem(padding-left,@left);
+}
+

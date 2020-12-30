@@ -1,0 +1,9 @@
+module.exports={
+    'code':"0000",
+    'success':true,
+    'data':{
+        netInvestAmount:5500000,
+        status:2
+    },
+    "msg":"操作成功"
+}

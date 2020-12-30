@@ -1,0 +1,1896 @@
+/***less公共的方法***/
+/***rem转换方法****/
+@import "../css/swiper.min.css";
+@import '../css/style.css';
+@import '../css/loading.css';
+/*弹框*/
+.frame-box {
+  min-width: 8.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5) center center no-repeat;
+}
+.frame-box .frame-main {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.frame-box .invite-info {
+  width: 8rem;
+  padding-top: 1.01333333rem;
+  padding-right: 0.4rem;
+  padding-bottom: 0.53333333rem;
+  padding-left: 0.4rem;
+  background: #fff;
+  border-top-left-radius: 0.26666667rem;
+  border-top-right-radius: 0.26666667rem;
+  border-bottom-right-radius: 0.26666667rem;
+  border-bottom-left-radius: 0.26666667rem;
+  border-radius: 0.26666667rem;
+  background-clip: padding-box;
+}
+.frame-box .invite-info .pop_title span {
+  font-family: "DIN-Bold";
+  color: #FFDE3D;
+  font-size: 0.82666667rem;
+}
+.frame-box .invite-info .button {
+  display: block;
+  width: 7.2rem;
+  height: 1.06666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/popButton.png");
+  margin: 0 auto;
+  line-height: 1.06666667rem;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0.78666667rem;
+  text-decoration: none;
+}
+[data-dpr="2"] .frame-box .invite-info .button {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .frame-box .invite-info .button {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .frame-box .invite-info .button {
+  font-size: 41px;
+}
+[data-dpr="3"] .frame-box .invite-info .button {
+  font-size: 45px;
+}
+[data-dpr="4"] .frame-box .invite-info .button {
+  font-size: 60px;
+}
+.frame-box .invite-info p {
+  font-family: "Arita-CZS";
+  font-size: 17px;
+  color: #333;
+  padding-left: 0.26666667rem;
+  line-height: 0.66666667rem;
+}
+[data-dpr="2"] .frame-box .invite-info p {
+  font-size: 34px;
+}
+[data-dpr="2.5"] .frame-box .invite-info p {
+  font-size: 43px;
+}
+[data-dpr="2.75"] .frame-box .invite-info p {
+  font-size: 47px;
+}
+[data-dpr="3"] .frame-box .invite-info p {
+  font-size: 51px;
+}
+[data-dpr="4"] .frame-box .invite-info p {
+  font-size: 68px;
+}
+.frame-box .invite-info .Img {
+  width: 1.33333333rem;
+  height: 1.46666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/qian.png");
+  position: absolute;
+  top: -0.26666667rem;
+  right: 0.53333333rem;
+}
+.frame-box .invite-info .close {
+  width: 0.56rem;
+  height: 0.56rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/close.png");
+  position: absolute;
+  bottom: -1.34666667rem;
+  left: 47%;
+}
+.model-div::before {
+  height: 0 !important;
+  width: 100%;
+  content: "";
+  display: block;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.yellow {
+  color: #FFAA00;
+}
+[v-cloak] {
+  display: none !important;
+}
+.number-grow-warp {
+  transform: translateZ(0);
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.swiper-wrapper {
+  position: relative;
+}
+.isOn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.06666667rem;
+  z-index: 1000;
+  width: 1.09333333rem;
+  height: 1.09333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/music.png");
+  -webkit-animation: rotating 1.8s linear infinite;
+  animation: rotating 1.8s linear infinite;
+}
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.isOff {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.06666667rem;
+  z-index: 1000;
+  width: 1.09333333rem;
+  height: 1.09333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/noMusic.png");
+}
+.index-page {
+  background: #FFF1CD !important;
+  height: 100%;
+  overflow-y: hidden;
+}
+.index-page .Music .musicVideo {
+  position: absolute;
+  top: 0.13333333rem;
+  right: 0rem;
+  z-index: 1000;
+}
+.index-page .Music .musicVideo img {
+  width: 1.09333333rem;
+  height: 1.09333333rem;
+}
+.index-page .noReport .noReportfirst {
+  height: 100%;
+}
+.index-page .noReport .noReportfirst .firstTop {
+  width: 10rem;
+  height: 10rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/indexTop.png");
+  padding-top: 2.41333333rem;
+}
+.index-page .noReport .noReportfirst .firstTop .firstText {
+  width: 6.84rem;
+  height: 2.94666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/noreport.png");
+  margin: 0 auto;
+}
+.index-page .noReport .noReportfirst .firstButtom {
+  width: 8rem;
+  height: 2.89333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/noReportButton.png");
+  line-height: 4.26666667rem;
+  font-family: "PingFangSC-Bold";
+  margin: 0 auto;
+  margin-top: -1.33333333rem;
+  font-size: 0.42666667rem;
+  bottom: 0.93333333rem;
+  color: #35c8e6;
+  text-align: center;
+}
+.index-page .noReport .noReportfirst .firstBottom {
+  width: 10rem;
+  height: 5.04rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/noReportBottom.png");
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.index-page .first {
+  height: 100%;
+}
+.index-page .first .firstTop {
+  width: 10rem;
+  height: 10rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/indexTop.png");
+  padding-top: 1.50666667rem;
+}
+.index-page .first .firstTop .firstText {
+  width: 6.93333333rem;
+  height: 4.17333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/indexSlogn.png");
+  margin: 0 auto;
+}
+.index-page .first .firstBottom {
+  width: 10rem;
+  height: 10.18666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/indexBottom.png");
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.index-page .first .firstBottom .firstButtom {
+  width: 5.33333333rem;
+  height: 1.33333333rem;
+  position: fixed;
+  font-weight: bold;
+  line-height: 1.2rem;
+  border-radius: 0.66666667rem;
+  border: 1.5px solid #FFFFFF;
+  font-family: "PingFangSC-Bold";
+  font-size: 0.42666667rem;
+  bottom: 0.93333333rem;
+  left: 23.5%;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+}
+.index-page .part1 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part1 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part1 .partTextAll .part1Text {
+  width: 9.76rem;
+  height: 11.76rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text1.png");
+  margin: 0 auto;
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+}
+.index-page .part1 .partTextAll .part1Text .title {
+  padding-top: 1.8rem;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.48rem;
+  color: #333;
+  font-weight: 500;
+}
+.index-page .part1 .partTextAll .part1Text .textPart {
+  font-family: "Arita-CZS";
+  margin-top: 0.74666667rem;
+}
+.index-page .part1 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part1 .partTextAll .part1Text .textPart p:first-child {
+  font-family: "DIN-Bold";
+  color: #FFAA00;
+  font-size: 0.53333333rem;
+}
+.index-page .part1 .partTextAll .part1Text .textPart p:first-child span {
+  font-size: 0.53333333rem;
+}
+.index-page .part1 .partTextAll .part1Text .textPart p span {
+  font-size: 0.45333333rem;
+  font-weight: bold;
+}
+.index-page .part1 .partTextAll .part1yezi {
+  width: 1.70666667rem;
+  height: 2.10666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/yezi1.png");
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  bottom: 1.06666667rem;
+}
+.index-page .part1 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom1.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part2 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part2 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part2 .partTextAll .part1Text {
+  width: 9.76rem;
+  height: 14rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text2.png");
+  margin: 0 auto;
+}
+.index-page .part2 .partTextAll .part1Text .part2Money {
+  padding-top: 1.70666667rem;
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  font-size: 0.4rem;
+  color: #333;
+}
+.index-page .part2 .partTextAll .part1Text .part2Money span {
+  color: #FFAA00;
+  font-size: 0.66666667rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part2 .partTextAll .part1Text .textPart {
+  margin-top: 0.74666667rem;
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+}
+.index-page .part2 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part2 .partTextAll .part1Text .textPart p span {
+  font-size: 0.53333333rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part2 .partTextAll .part2Echart {
+  position: relative;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip {
+  width: 29%;
+  position: absolute;
+  right: 1.33333333rem;
+  top: 0.93333333rem;
+  z-index: 100;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div {
+  padding-top: 0.21333333rem;
+  padding-bottom: 0.21333333rem;
+  border-bottom: 1px dotted #D1D1D1;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div:last-child {
+  border-bottom: none;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div span {
+  margin-right: 0.13333333rem;
+  font-family: "Arita-CZS";
+  font-size: 0.37333333rem;
+  color: #4A4A4A;
+  display: block;
+  float: left;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div span:last-child {
+  float: right;
+  margin-right: 0rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div .tip1 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FFEC66 ;
+  margin-top: 0.08rem;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div .tip2 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FFBD00  ;
+  margin-top: 0.08rem;
+}
+.index-page .part2 .partTextAll .part2Echart .container2Tip div .tip3 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #6CD7FF ;
+  margin-top: 0.08rem;
+}
+.index-page .part2 .partTextAll .part1yezi {
+  width: 1.48rem;
+  height: 2.90666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/yezi2.png");
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  top: 2.13333333rem;
+}
+.index-page .part2 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom2.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part3 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part3 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part3 .partTextAll .part1Text {
+  width: 9.76rem;
+  height: 12.66666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text3.png");
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  margin: 0 auto;
+}
+.index-page .part3 .partTextAll .part1Text .part2Money {
+  padding-top: 1.70666667rem;
+  font-size: 0.4rem;
+  color: #333;
+}
+.index-page .part3 .partTextAll .part1Text .part2Money span {
+  color: #FFAA00;
+  font-size: 0.66666667rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part3 .partTextAll .part1Text .textPart {
+  margin-top: 1.01333333rem;
+}
+.index-page .part3 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part3 .partTextAll .part1Text .textPart p span {
+  font-size: 0.53333333rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part3 .partTextAll .part1Text .part3Slogn {
+  margin-top: 1.2rem;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #333333;
+}
+.index-page .part3 .partTextAll .part1Text .part3Slogn .line {
+  margin-right: 0.26666667rem;
+  margin-top: 0.26666667rem;
+  width: 1.46666667rem;
+  height: 0.02666667rem;
+  background: #333;
+}
+.index-page .part3 .partTextAll .part1yezi {
+  width: 2.05333333rem;
+  height: 2.77333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/yezi3.png");
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  top: 2.66666667rem;
+}
+.index-page .part3 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom3.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part4 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part4 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part4 .partTextAll .part4Img1 {
+  width: 9.76rem;
+  height: 13.33333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text43.png");
+  margin: 0 auto;
+}
+.index-page .part4 .partTextAll .part4Img2 {
+  width: 9.76rem;
+  height: 13.33333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text42.png");
+  margin: 0 auto;
+}
+.index-page .part4 .partTextAll .part4Img3 {
+  width: 9.76rem;
+  height: 13.33333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text41.png");
+  margin: 0 auto;
+}
+.index-page .part4 .partTextAll .part4tImg4 {
+  width: 9.76rem;
+  height: 13.33333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text4.png");
+  margin: 0 auto;
+}
+.index-page .part4 .partTextAll .part1Text .part2Money {
+  padding-top: 1.70666667rem;
+  font-family: "DIN-Bold";
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  font-size: 0.4rem;
+  color: #333;
+}
+.index-page .part4 .partTextAll .part1Text .part2Money span {
+  color: #FFAA00;
+  font-size: 0.66666667rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part4 .partTextAll .part1Text .textPart {
+  margin-top: 1.01333333rem;
+}
+.index-page .part4 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part4 .partTextAll .part1Text .textPart p span {
+  font-size: 0.53333333rem;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip {
+  width: 29%;
+  position: absolute;
+  right: 1.33333333rem;
+  top: 0.4rem;
+  z-index: 100;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div {
+  padding-top: 0.13333333rem;
+  padding-bottom: 0.13333333rem;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div span {
+  margin-right: 0.26666667rem;
+  font-family: Arita-CZS;
+  font-size: 0.37333333rem;
+  color: #4A4A4A;
+  display: block;
+  float: left;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div span:last-child {
+  float: right;
+  margin-right: 0rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div .tip1 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FFEB58 ;
+  margin-top: 0.08rem;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div .tip2 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FFB200 ;
+  margin-top: 0.08rem;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div .tip3 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #6CD7FF ;
+  margin-top: 0.08rem;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div .tip4 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FF7700 ;
+  margin-top: 0.13333333rem;
+}
+.index-page .part4 .partTextAll .part1Text .partMoney .container4Tip div .tip5 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #39E77A ;
+  margin-top: 0.08rem;
+}
+.index-page .part4 .partTextAll .part1Text .textProperty {
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  font-family: Arita-CZS;
+  font-size: 0.4rem;
+  color: #333333;
+  line-height: 0.64rem;
+  margin-top: 0.16rem;
+}
+.index-page .part4 .partTextAll .part1Text .part3Slogn {
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  margin-top: 1.33333333rem;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #333333;
+}
+.index-page .part4 .partTextAll .part1Text .part3Slogn .line {
+  margin-right: 0.26666667rem;
+  margin-top: 0.26666667rem;
+  width: 1.46666667rem;
+  height: 0.02666667rem;
+  background: #333;
+}
+.index-page .part4 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom4.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part5 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part5 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part5 .partTextAll .part1Text {
+  width: 9.76rem;
+  height: 11.09333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text5.png");
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  margin: 0 auto;
+}
+.index-page .part5 .partTextAll .part1Text .part2Money {
+  padding-top: 1.70666667rem;
+  font-family: "DIN-Bold";
+  font-size: 0.4rem;
+  color: #333;
+}
+.index-page .part5 .partTextAll .part1Text .part2Money span {
+  color: #FFAA00;
+  font-size: 0.66666667rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part5 .partTextAll .part1Text .textPart {
+  margin-top: 1.01333333rem;
+}
+.index-page .part5 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part5 .partTextAll .part1Text .textPart p span {
+  font-size: 0.53333333rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part5 .partTextAll .part1Text .textProperty {
+  font-family: Arita-CZS;
+  font-size: 0.4rem;
+  color: #333333;
+  line-height: 0.64rem;
+  margin-top: 0.16rem;
+}
+.index-page .part5 .partTextAll .part1Text .part3Slogn {
+  margin-top: 0.53333333rem;
+  font-family: "PingFangSC-Medium";
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #333333;
+}
+.index-page .part5 .partTextAll .part1Text .part3Slogn .line {
+  margin-right: 0.26666667rem;
+  margin-top: 0.26666667rem;
+  width: 1.46666667rem;
+  height: 0.02666667rem;
+  background: #333;
+}
+.index-page .part5 .part1yezi {
+  width: 1.48rem;
+  height: 2.90666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/yezi2.png");
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  top: 2.13333333rem;
+}
+.index-page .part5 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom5.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part6 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part6 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.96rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part6 .partTextAll .part1Text {
+  width: 9.76rem;
+  height: 12.96rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text6.png");
+  padding-left: 1.16rem;
+  padding-right: 1.06666667rem;
+  margin: 0 auto;
+}
+.index-page .part6 .partTextAll .part1Text .part2Money {
+  padding-top: 1.70666667rem;
+  font-family: "DIN-Bold";
+  font-size: 0.4rem;
+  color: #333;
+}
+.index-page .part6 .partTextAll .part1Text .part2Money span {
+  color: #FFAA00;
+  font-size: 0.66666667rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part6 .partTextAll .part1Text .textPart {
+  margin-top: 0.74666667rem;
+}
+.index-page .part6 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part6 .partTextAll .part1Text .textPart p span {
+  font-size: 0.53333333rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part6 .partTextAll .part1Text .friendImg {
+  width: 6.34666667rem;
+  height: 3.77333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/member.png");
+  position: absolute;
+  bottom: 2.02666667rem;
+  left: 1.8rem;
+}
+.index-page .part6 .partTextAll .part1Text .textProperty {
+  font-family: Arita-CZS;
+  font-size: 0.4rem;
+  color: #333333;
+  line-height: 0.64rem;
+  margin-top: 0.16rem;
+}
+.index-page .part6 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom6.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part7 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part7 .partTextAll {
+  position: relative;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  padding-top: 0.69333333rem;
+}
+.index-page .part7 .partTextAll .part1Text {
+  width: 9.76rem;
+  height: 13.33333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text7.png");
+  margin: 0 auto;
+  padding-left: 1.16rem;
+  padding-left: 1.06666667rem;
+}
+.index-page .part7 .partTextAll .part1Text .part2Money {
+  padding-top: 1.70666667rem;
+  font-size: 0.4rem;
+  color: #333;
+}
+.index-page .part7 .partTextAll .part1Text .part2Money span {
+  color: #FFAA00;
+  font-size: 0.66666667rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part7 .partTextAll .part1Text .textPart {
+  margin-top: 1.01333333rem;
+}
+.index-page .part7 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.24rem;
+  line-height: 0.64rem;
+}
+.index-page .part7 .partTextAll .part1Text .textPart p span {
+  font-size: 0.53333333rem;
+  font-weight: bold;
+}
+.index-page .part7 .partTextAll .part1Text .textPart .giftjiezhi {
+  width: 2.84rem;
+  height: 2.90666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/zuanjie.png");
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.66666667rem;
+}
+.index-page .part7 .partTextAll .part1Text .textPart .giftka {
+  width: 4.12rem;
+  height: 2.81333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/ka.png");
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.66666667rem;
+}
+.index-page .part7 .partTextAll .part1Text .textPart .giftiphoneXS {
+  width: 1.70666667rem;
+  height: 3.37333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/iphonex.png");
+  position: absolute;
+  right: 1.37333333rem;
+  bottom: 1.2rem;
+}
+.index-page .part7 .partTextAll .part1Text .textPart .giftjintiao {
+  width: 3.06666667rem;
+  height: 1.70666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/jintiao.png");
+  position: absolute;
+  right: 1.37333333rem;
+  bottom: 1.2rem;
+}
+.index-page .part7 .partTextAll .part1Text .textProperty {
+  font-family: Arita-CZS;
+  font-size: 0.4rem;
+  color: #333333;
+  line-height: 0.64rem;
+  margin-top: 0.16rem;
+}
+.index-page .part7 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom7.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part8 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part8 .partTextAll {
+  padding-top: 0.69333333rem;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  position: relative;
+}
+.index-page .part8 .partTextAll .part1Text {
+  padding-top: 1.44rem;
+  width: 9.76rem;
+  height: 13.44rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text8.png");
+  margin: 0 auto;
+}
+.index-page .part8 .partTextAll .part1Text .textPart {
+  margin-left: 1.16rem;
+}
+.index-page .part8 .partTextAll .part1Text .textPart p {
+  font-family: "Arita-CZS";
+  font-size: 0.4rem;
+  color: #333;
+  margin-bottom: 0.26666667rem;
+  line-height: 0.64rem;
+}
+.index-page .part8 .partTextAll .part1Text .textPart p span {
+  font-family: "DIN-Bold";
+  font-size: 0.66666667rem;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip {
+  width: 43%;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  z-index: 100;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div {
+  padding-top: 0.26666667rem;
+  padding-bottom: 0.26666667rem;
+  border-bottom: 1px dotted #D1D1D1;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div:last-child {
+  border-bottom: none;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div span {
+  margin-right: 0.26666667rem;
+  font-family: Arita-CZS;
+  font-size: 0.4rem;
+  color: #4A4A4A;
+  display: block;
+  float: left;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div span:last-child {
+  float: right;
+  margin-right: 0rem;
+  font-family: "DIN-Bold";
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div span:nth-child(2) {
+  margin-right: 0rem;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div .tip1 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FFEC66 ;
+  margin-top: 0.10666667rem;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div .tip2 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #FFBD00 ;
+  margin-top: 0.10666667rem;
+}
+.index-page .part8 .partTextAll .part1Text .container8Tip div .tip3 {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #6CD7FF;
+  margin-top: 0.10666667rem;
+}
+.index-page .part8 .partTextAll .part1Text .financialIncome {
+  border-top: 1px dotted #D1D1D1;
+  width: 8rem;
+  margin: 0 auto;
+  padding-top: 0.4rem;
+  padding-bottom: 0.24rem;
+  border-bottom: 1px dotted #D1D1D1;
+}
+.index-page .part8 .partTextAll .part1Text .financialIncome .IncomList div {
+  width: 33%;
+  font-family: "Arita-CZS";
+  font-size: 0.42666667rem;
+  color: #4A4A4A;
+  text-align: center;
+}
+.index-page .part8 .partTextAll .part1Text .financialIncome .IncomList div:nth-child(2) {
+  border-left: 1px dotted #D1D1D1;
+  border-right: 1px dotted #D1D1D1;
+}
+.index-page .part8 .partTextAll .part1Text .financialIncome .IncomList div p {
+  margin-bottom: 0.16rem;
+}
+.index-page .part8 .partTextAll .part1Text .financialIncome .IncomList div p:last-child {
+  font-family: "DIN-Bold";
+}
+.index-page .part8 .partTextAll .part1Text .financialIncome .incomTip {
+  text-align: center;
+  font-family: "Arita-CZS";
+  font-size: 0.32rem;
+  margin-top: 0.26666667rem;
+  color: #9B9B9B;
+}
+.index-page .part8 .partTextAll .part1Text .incomBottom {
+  margin-top: 0.26666667rem;
+  text-align: center;
+}
+.index-page .part8 .partTextAll .part1Text .incomBottom div {
+  margin-bottom: 0.13333333rem;
+  font-family: "Arita-CZS";
+  font-size: 0.42666667rem;
+}
+.index-page .part8 .partTextAll .part1Text .incomBottom div span {
+  font-size: 0.53333333rem;
+}
+.index-page .part8 .partTextAll .part1Text .incomBottom div:last-child {
+  font-family: "DIN-Bold";
+}
+.index-page .part8 .part1Bottom {
+  width: 10rem;
+  height: 5.02666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom8.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part8 .part1Bottom .bottomYuce {
+  text-align: center;
+  width: 100%;
+  font-family: "DIN-Bold";
+  font-size: 0.42666667rem;
+  color: #FFFFFF;
+  letter-spacing: 1.28px;
+  text-shadow: 0 2px 14px rgba(230, 0, 0, 0.5);
+  position: absolute;
+  bottom: 1.06666667rem;
+  left: 0;
+}
+.index-page .part9 {
+  position: relative;
+  height: 100%;
+}
+.index-page .part9 .partTextAll {
+  padding-top: 0.26666667rem;
+  width: 10rem;
+  height: 12.85333333rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/textbg.png");
+  position: relative;
+}
+.index-page .part9 .partTextAll .part1Text {
+  text-align: center;
+  padding-top: 3.2rem;
+  width: 9.57333333rem;
+  height: 14.88rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/text9.png");
+  margin: 0 auto;
+}
+.index-page .part9 .partTextAll .part1Text .shareImg1 {
+  width: 7.33333333rem;
+  height: 4.8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/share1.png");
+  margin: 0 auto;
+}
+.index-page .part9 .partTextAll .part1Text .shareImg2 {
+  width: 7.33333333rem;
+  height: 4.8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/share2.png");
+  margin: 0 auto;
+}
+.index-page .part9 .partTextAll .part1Text .shareImg3 {
+  width: 7.33333333rem;
+  height: 4.8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/share3.png");
+  margin: 0 auto;
+}
+.index-page .part9 .partTextAll .part1Text .shareImg4 {
+  width: 7.33333333rem;
+  height: 4.8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/share4.png");
+  margin: 0 auto;
+}
+.index-page .part9 .partTextAll .part1Text .shareImgText1 {
+  width: 7.33333333rem;
+  height: 0.98666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/shareText1.png");
+  margin: 0 auto;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.26666667rem;
+}
+.index-page .part9 .partTextAll .part1Text .shareImgText2 {
+  width: 7.33333333rem;
+  height: 0.98666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/shareText2.png");
+  margin: 0 auto;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.26666667rem;
+}
+.index-page .part9 .partTextAll .part1Text .shareImgText3 {
+  width: 7.33333333rem;
+  height: 0.98666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/shareText3.png");
+  margin: 0 auto;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.26666667rem;
+}
+.index-page .part9 .partTextAll .part1Text .shareImgText4 {
+  width: 7.33333333rem;
+  height: 0.98666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/shareText4.png");
+  margin: 0 auto;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.26666667rem;
+}
+.index-page .part9 .partTextAll .part1Text .shareText {
+  font-family: "PingFang-SC-Light";
+  font-size: 0.4rem;
+  color: #36363A;
+}
+.index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonOne {
+  font-family: "PingFang-SC-Semibold";
+  width: 4.93333333rem;
+  height: 1.2rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/button.png");
+  margin: 0 auto;
+  margin-top: 0.85333333rem;
+  margin-bottom: 0.45333333rem;
+  line-height: 1.2rem;
+  font-size: 0.4rem;
+  text-align: center;
+  color: #fff;
+}
+.index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonTwo {
+  width: 2.33333333rem;
+  margin: 0 auto;
+  font-family: "PingFang-SC-Light";
+  text-decoration: none;
+  font-size: 0.4rem;
+  color: #36363A;
+}
+.index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonTwo .backImg {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/goBack.png");
+  margin-top: 0.10666667rem;
+  display: block;
+  float: left;
+}
+.index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonTwo a {
+  font-family: "PingFang-SC-regular";
+}
+.index-page .part9 .part9yezi {
+  width: 2.93333333rem;
+  height: 3.86666667rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/yezi4.png");
+  position: absolute;
+  left: 0;
+  z-index: 99;
+  bottom: 0rem;
+}
+.index-page .part9 .part1Bottom {
+  width: 10rem;
+  height: 4.8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/bottom9.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-page .part1,
+.index-page .part2,
+.index-page .part3,
+.index-page .part4,
+.index-page .part5,
+.index-page .part6,
+.index-page .part7,
+.index-page .part8 {
+  /**/
+}
+.index-page .part1 .arrow-box,
+.index-page .part2 .arrow-box,
+.index-page .part3 .arrow-box,
+.index-page .part4 .arrow-box,
+.index-page .part5 .arrow-box,
+.index-page .part6 .arrow-box,
+.index-page .part7 .arrow-box,
+.index-page .part8 .arrow-box {
+  position: absolute;
+  bottom: 0.37333333rem;
+  left: 25%;
+  right: 0;
+  width: 50%;
+  z-index: 900;
+}
+.index-page .part1 #array,
+.index-page .part2 #array,
+.index-page .part3 #array,
+.index-page .part4 #array,
+.index-page .part5 #array,
+.index-page .part6 #array,
+.index-page .part7 #array,
+.index-page .part8 #array {
+  -webkit-animation: start 1.5s infinite ease-in-out;
+  display: block;
+  margin: 15px  auto 0 auto;
+  width: 25;
+  height: 36px;
+  z-index: 999;
+}
+/*mate7*/
+@media only screen and (min-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 3) {
+  .index-page .part9 .partTextAll .part1Text {
+    width: 9.57333333rem;
+    height: 13.33333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/text9.png");
+  }
+}
+/* iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+  .index-page .part8 .part1Bottom .bottomYuce {
+    bottom: 0.66666667rem;
+  }
+  .index-page .part8 .partTextAll .part1Text .incomBottom {
+    margin-top: 0.13333333rem;
+  }
+  .index-page .part8 .partTextAll .part1Text .incomBottom div {
+    margin-bottom: 0rem;
+  }
+  .index-page .part8 .partTextAll .part1Text .container8Tip {
+    top: 25px;
+    right: 25px;
+  }
+  .index-page .part2 .partTextAll .part2Echart .container2Tip {
+    position: absolute;
+    right: 1.33333333rem;
+    top: 1.33333333rem;
+    z-index: 100;
+  }
+  .index-page .part4 .partTextAll .part1Text .partMoney .container4Tip {
+    position: absolute;
+    right: 1.06666667rem;
+    top: 0.73333333rem;
+    z-index: 100;
+  }
+  .index-page .part8 .partTextAll .part1Text .financialIncome {
+    margin-top: -0.4rem;
+  }
+  .index-page .part8 .partTextAll .part1Text {
+    padding-top: 1.44rem;
+    width: 9.76rem;
+    height: 13.6rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/text8.png");
+    margin: 0 auto;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .index-page .part1 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part1 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.69333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx1.png");
+  }
+  .index-page .part2 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part2 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.76rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx2.png");
+  }
+  .index-page .part3 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part3 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.22666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx3.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx4.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img3 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx41.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4tImg4 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx4.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img2 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx42.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img1 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx43.png");
+  }
+  .index-page .part5 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part5 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.22666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx5.png");
+  }
+  .index-page .part6 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part6 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx6.png");
+  }
+  .index-page .part6 .partTextAll .part1Text .friendImg {
+    bottom: 0.93333333rem;
+  }
+  .index-page .part7 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part7 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx7.png");
+  }
+  .index-page .part8 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part8 .partTextAll .part1Text {
+    width: 9.57333333rem;
+    height: 13.70666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx8.png");
+  }
+  .index-page .part8 .part1Bottom .bottomYuce {
+    bottom: 2.13333333rem;
+  }
+  .index-page .part9 .partTextAll {
+    padding-top: 0.53333333rem;
+  }
+  .index-page .part9 .partTextAll .part1Text {
+    padding-top: 3.33333333rem;
+    width: 9.57333333rem;
+    height: 16.21333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx9.png");
+  }
+  .index-page .part9 .partTextAll .part1Text .shareImgText1,
+  .index-page .part9 .partTextAll .part1Text .shareImgText2,
+  .index-page .part9 .partTextAll .part1Text .shareImgText3,
+  .index-page .part9 .partTextAll .part1Text .shareImgText4 {
+    margin-top: 0.8rem;
+  }
+  .index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonOne {
+    margin-top: 1.38666667rem;
+  }
+  .index-page .part1 .arrow-box,
+  .index-page .part2 .arrow-box,
+  .index-page .part3 .arrow-box,
+  .index-page .part4 .arrow-box,
+  .index-page .part5 .arrow-box,
+  .index-page .part6 .arrow-box,
+  .index-page .part7 .arrow-box,
+  .index-page .part8 .arrow-box {
+    bottom: 0.8rem;
+  }
+  .index-page .first .firstTop {
+    padding-top: 2.66666667rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .index-page .part1 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part1 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.69333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx1.png");
+  }
+  .index-page .part2 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part2 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.76rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx2.png");
+  }
+  .index-page .part3 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part3 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.22666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx3.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx4.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img3 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx41.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4tImg4 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx4.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img2 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx42.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img1 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx43.png");
+  }
+  .index-page .part5 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part5 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.22666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx5.png");
+  }
+  .index-page .part6 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part6 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx6.png");
+  }
+  .index-page .part6 .partTextAll .part1Text .friendImg {
+    bottom: 0.93333333rem;
+  }
+  .index-page .part7 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part7 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx7.png");
+  }
+  .index-page .part8 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part8 .partTextAll .part1Text {
+    width: 9.57333333rem;
+    height: 13.70666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx8.png");
+  }
+  .index-page .part8 .part1Bottom .bottomYuce {
+    bottom: 2.13333333rem;
+  }
+  .index-page .part9 .partTextAll {
+    padding-top: 0.53333333rem;
+  }
+  .index-page .part9 .partTextAll .part1Text {
+    padding-top: 3.33333333rem;
+    width: 9.57333333rem;
+    height: 16.21333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx9.png");
+  }
+  .index-page .part9 .partTextAll .part1Text .shareImgText1,
+  .index-page .part9 .partTextAll .part1Text .shareImgText2,
+  .index-page .part9 .partTextAll .part1Text .shareImgText3,
+  .index-page .part9 .partTextAll .part1Text .shareImgText4 {
+    margin-top: 0.8rem;
+  }
+  .index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonOne {
+    margin-top: 1.38666667rem;
+  }
+  .index-page .part1 .arrow-box,
+  .index-page .part2 .arrow-box,
+  .index-page .part3 .arrow-box,
+  .index-page .part4 .arrow-box,
+  .index-page .part5 .arrow-box,
+  .index-page .part6 .arrow-box,
+  .index-page .part7 .arrow-box,
+  .index-page .part8 .arrow-box {
+    bottom: 0.8rem;
+  }
+  .index-page .first .firstTop {
+    padding-top: 2.66666667rem;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .index-page .part1 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part1 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.69333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx1.png");
+  }
+  .index-page .part2 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part2 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.76rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx2.png");
+  }
+  .index-page .part3 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part3 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.22666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx3.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx4.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img3 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx41.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4tImg4 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx4.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img2 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx42.png");
+  }
+  .index-page .part4 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part4 .partTextAll .part4Img1 {
+    width: 9.76rem;
+    height: 13.62666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx43.png");
+  }
+  .index-page .part5 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part5 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.22666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx5.png");
+  }
+  .index-page .part6 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part6 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx6.png");
+  }
+  .index-page .part6 .partTextAll .part1Text .friendImg {
+    bottom: 0.93333333rem;
+  }
+  .index-page .part7 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part7 .partTextAll .part1Text {
+    width: 9.76rem;
+    height: 13.36rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx7.png");
+  }
+  .index-page .part8 .partTextAll {
+    padding-top: 1.46666667rem;
+  }
+  .index-page .part8 .partTextAll .part1Text {
+    width: 9.57333333rem;
+    height: 13.70666667rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx8.png");
+  }
+  .index-page .part8 .part1Bottom .bottomYuce {
+    bottom: 2.13333333rem;
+  }
+  .index-page .part9 .partTextAll {
+    padding-top: 0.53333333rem;
+  }
+  .index-page .part9 .partTextAll .part1Text {
+    padding-top: 3.33333333rem;
+    width: 9.57333333rem;
+    height: 16.21333333rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../res/iphoneX/textx9.png");
+  }
+  .index-page .part9 .partTextAll .part1Text .shareImgText1,
+  .index-page .part9 .partTextAll .part1Text .shareImgText2,
+  .index-page .part9 .partTextAll .part1Text .shareImgText3,
+  .index-page .part9 .partTextAll .part1Text .shareImgText4 {
+    margin-top: 0.8rem;
+  }
+  .index-page .part9 .partTextAll .part1Text .shareButtom .shareButtonOne {
+    margin-top: 1.38666667rem;
+  }
+  .index-page .part1 .arrow-box,
+  .index-page .part2 .arrow-box,
+  .index-page .part3 .arrow-box,
+  .index-page .part4 .arrow-box,
+  .index-page .part5 .arrow-box,
+  .index-page .part6 .arrow-box,
+  .index-page .part7 .arrow-box,
+  .index-page .part8 .arrow-box {
+    bottom: 0.8rem;
+  }
+  .index-page .first .firstTop {
+    padding-top: 2.66666667rem;
+  }
+}

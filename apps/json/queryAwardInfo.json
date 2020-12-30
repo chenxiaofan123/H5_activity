@@ -1,0 +1,35 @@
+{
+    "data": {
+        "pastWinList": [
+            {
+                "lotteryCode": "1234",
+                "lotteryName": "一元抢购",
+                "buyIp": "233.104.4.**",
+                "lotteryNo": "123",
+                "prizeName": "10克",
+                "prizeNum": 1,
+                "saleNum": 3000,
+                "rewardTime": "2016-08-23 16:58:30.238",
+                "winIp": "233.104.4.**",
+                "mobile": "186******16",
+                "winYard": "00000123"
+            },
+            {
+                "lotteryCode": "1111",
+                "lotteryName": "一元抢购",
+                "buyIp": "233.104.5.**",
+                "lotteryNo": "1222",
+                "prizeName": "11克",
+                "prizeNum": 1,
+                "saleNum": 2000,
+                "rewardTime": "2016-08-23 16:58:30.238",
+                "winIp": "233.104.4.**",
+                "mobile": "186******16",
+                "winYard": "00000123"
+            }
+        ]
+    },
+    "serverTime": 1472009471271,
+    "code": "0000",
+    "msg": "操作成功"
+}

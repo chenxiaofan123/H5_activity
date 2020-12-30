@@ -1,0 +1,18 @@
+
+
+button[disable]  { background:#dddddd;}
+
+.button(@width,@height,@bg,@color){
+	border:0;
+	outline:0;
+	.px2rem(width,@width);
+	.px2rem(height,@height);
+	.px2rem(line-height,@height);
+	background:@bg;
+	color:@color;
+	display:inline-block;
+	font-weight: bold;
+	padding-top:1px;
+
+
+}

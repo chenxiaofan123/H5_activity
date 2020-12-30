@@ -1,0 +1,15 @@
+{
+  "data":{
+    "changeRate": 0.2,
+    "deductibleTypeStr": "测试内容t534",
+    "discountMoney": 15374,
+    "giftCode": "测试内容37u5",
+    "goldWeight": 10,
+    "repeat": 0,
+    "startWeight": 80348,
+    "useLimit": "测试内容s1gk"
+  },
+  "serverTime": 1472009471271,
+  "code": "0000",
+  "msg": "操作成功"
+}

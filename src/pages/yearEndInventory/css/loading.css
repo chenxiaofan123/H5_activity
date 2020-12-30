@@ -1,0 +1,57 @@
+.loading{
+    height: 100%
+}
+
+#idContent{
+    width: 100%;
+    background-color: #F5FDFF !important;
+    height:100%;
+    display:block;
+    box-shadow: inset 0 1px 120px 0 rgba(74,144,226,0.20);
+}
+.contentBg{
+   background: url('../res/indexTop.png') no-repeat;
+    width: 100%;
+    height:375px;
+    background-size: 100% 100%;
+}
+.loadingText{
+    text-align: center;
+    font-size: 15px;
+    color: #666666;
+    margin-bottom:15px;
+    padding-top:80%;
+    font-family:"PingFangSC-Medium";
+}
+#appLoading {
+    list-style: none;
+    width: 62%;
+    margin:0 auto;
+    position: relative;
+}
+#appLoading li {
+    background: #DBF0F6;
+    height: 12px;
+    border-radius: 6px;
+}
+.bar {
+    height: 10px;
+    margin: 1px 0;
+    position: absolute;
+    border-radius: 6px;
+    /* -webkit-box-shadow:0 1px 0 #fcfcfc inset, 0 1px 0 #bebbb9;
+    box-shadow:0 1px 0 #fcfcfc inset, 0 1px 0 #bebbb9; */
+}
+.graphic-design {
+    /* width: 100%; */
+    -webkit-animation: graphic-design 2s ease-in-out;
+background:#FFEB00;
+    background:-webkit-linear-gradient(left,#FFEB00,#FFD200);
+    background:-o-linear-gradient(right,#FFEB00,#FFD200);
+    background:-moz-linear-gradient(right,#FFEB00,#FFD200);
+    background:linear-gradient(to right,#FFEB00,#FFD200);
+}
+@-webkit-keyframes graphic-design {
+    0% {width:0;}
+    100%{width:100%;}
+}

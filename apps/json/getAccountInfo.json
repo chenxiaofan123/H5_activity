@@ -1,0 +1,16 @@
+
+{
+  "data":{
+    "balanceMoney":100000,
+    "goldWeight":20000,
+    "totalValue":325400,
+    "initMoney":1000000,
+    "profitRate":20,
+    "totalProfitAndLoss":2541,
+    "avgPrice":28541,
+    "profitAndLoss":541
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

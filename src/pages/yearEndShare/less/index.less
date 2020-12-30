@@ -1,0 +1,150 @@
+@import "../../../../statics/less/base/method.less";
+.model-div {
+  &::before {
+    height: 0 !important;
+    width: 100%;
+    content: "";
+    display: block;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // font-family: "Arita-Heiti";
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.yellow{
+  color:#FFAA00;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bg-img( @file , @width, @height ) {
+  .px2rem(width, @width);
+  .px2rem(height, @height);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/@{file}");
+}
+
+.border(@size,@color) {
+  @bor: @size / 75 * 1rem;
+  border: @bor solid @color;
+}
+[v-cloak] {
+  display: none !important;
+}
+.index-page {
+  overflow-y:hidden;
+  height: 100%;
+  .first{
+    height:100%;
+    .firstTop{
+        .bg-img("indexTop.png",750,750);
+        .px2rem(padding-top, 144);
+        .firstText{
+         .bg-img("logo.png",562,285);
+         margin:0 auto;
+        }
+    }
+    .buttonAll{
+      position: absolute;
+      left:10%;
+      top:60%;
+      .firstButtom{
+        .px2rem(width, 600);
+        .px2rem(height, 110);
+        margin: 0 auto;
+        .px2rem(margin-bottom, 35);
+        .px2rem(margin-top, -145);
+         background: #FFAA00;
+        .px2rem(line-height, 110);
+        .px2rem(border-radius, 67);
+        font-family: "PingFangSC-Medium";
+        .px2rem(font-size, 30);
+        color: #FFFFFF;
+        text-align: center;
+      }
+      .giftPackageButton{
+        .px2rem(width, 600);
+         margin: 0 auto;
+        .px2rem(height, 110);
+         color: #FFAA00;
+        .px2rem(line-height, 110);
+        .px2rem(border-radius, 50);
+        border: 1.5px solid #FFAA00;;
+        font-family: "PingFangSC-Medium;";
+        .px2rem(font-size, 30);
+        text-align: center;
+      }
+    }
+    
+    .firstBottom{
+        .bg-img("indexBottom1.png",750,378);
+        position: absolute;;
+        bottom:0;
+        left:0;
+    }
+
+  }
+
+}
+
+/* iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+}
+
+//iphoneX、iphoneXs
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  footer {
+    padding-bottom: 20px !important;
+  }
+
+  // .index-page {
+  //     padding-bottom: 3.8rem !important;
+  // }
+}
+
+//iphone Xs Max
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  footer {
+    padding-bottom: 20px !important;
+  }
+
+  // .index-page {
+  //     padding-bottom: 3.8rem !important;
+  // }
+}
+
+//iphone XR
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  footer {
+    padding-bottom: 20px !important;
+  }
+
+  // .index-page {
+  //     padding-bottom: 3.8rem !important;
+  // }
+}
+

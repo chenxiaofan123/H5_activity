@@ -1,0 +1,197 @@
+/*****/
+/*弹出样式*/
+
+.modal-open {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.show_window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transition: all 0.6s;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+}
+.windowMask {
+    min-width: 8.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 90;
+    background: rgba(0, 0, 0, 0.7) center center no-repeat;
+}
+.windowMask2 {
+    min-width: 8.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 90;
+}
+.windowMask3 {
+    min-width: 8.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 90;
+    background: #fff;
+}
+//modal 有输入框
+//炒金大赛中 买卖弹窗样式
+.show_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 100;
+    .show_modal_body {
+        //内容偏视窗上部
+        .pa();
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        width: 100%;
+    }
+}
+
+/***question tip 问号提示样式****/
+.pop-risk-waring {
+    .px2rem(width,578);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    background-color: #fff6cd;
+    position: fixed;
+    z-index: 100;
+    line-height: 1;
+    .px2rem(padding-top,38);
+    .px2rem(padding-bottom,44);
+    .px2rem(padding-left,28);
+    .px2rem(padding-right,33);
+}
+.pop-risk-waring .source-title {
+    .px2px(font-size,30);
+    color: #5a5a5a;
+    font-weight: bold;
+}
+.pop-risk-waring .close {
+    .px2rem(width,22);
+    float: right;
+    img {
+        width: 100%;
+    }
+}
+.pop-risk-waring .content {
+    background: #fff6cd;
+    .px2rem(padding-top,20);
+}
+.pop-risk-waring .content p {
+    .px2px(font-size,26);
+    background: #fff6cd;
+    color: #5a5a5a;
+    line-height: 1.5;
+    .px2rem(margin-top,6);
+}
+.dialog_loading {
+}
+
+/**落地页弹窗alert 样式 begin**/
+.landingalert-wrap {
+    .px2rem(width,500);
+    .borderradius1(8);
+    background: rgba(0,0,0,.8);
+    text-align: center;
+    .px2rem(padding-top,30);
+    .px2rem(padding-bottom,20);
+    .landingalert-title {
+        color: #fff;
+        .px2px(font-size,32);
+    }
+    .landingalert-tip-text {
+        color: rgba(190, 224, 247, 0.9);
+        .px2rem(padding-top,10);
+        .px2px(font-size,24);
+        width: 80%;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
+    .landingalert-close-btn {
+        margin: 0 auto;
+        .px2rem(margin-top,15);
+        .px2rem(width,100);
+        .px2rem(height,40);
+        font-weight: bold;
+        background: #ffb20c;
+        color: #fff;
+        .borderradius1(8);
+        .px2px(font-size,24);
+        border: 0;
+        display: block;
+
+    }
+}
+
+/**落地页弹窗alert 样式 end**/
+
+/*****注册已注册用户的弹窗********/
+.downalert-wrap {
+    background: #fff;
+    .px2rem(width,642);
+    .borderradius1(8);
+    .pr();
+    text-align: center;
+    .px2rem(padding-top,70);
+    box-sizing: border-box;
+    .px2rem(height,370);
+    p {
+        color: #fc6203;
+        .px2px(font-size,38);
+        .px2rem(margin-bottom,20);
+        line-height: 1;
+    }
+    .downalertbutton {
+        display: inline-block;
+        .px2rem(margin-top,35);
+        color: #fff;
+        border: 0;
+        .px2rem(width, 490);
+        .px2rem(height, 80);
+        .px2rem(line-height, 80);
+        .px2rem(border-radius, 80);
+        background-color: #fea800;
+        border:1px solid #ffc309;
+        .px2px(font-size, 32);
+        text-align: center;
+        -webkit-box-shadow: 0 4px 4px rgba(250, 185, 94, 0.3);
+        -moz-box-shadow: 0 4px 4px rgba(250, 185, 94, 0.3);
+        box-shadow: 0 4px 4px rgba(250, 185, 94, 0.3);
+    }
+    .downalert-close{
+        .pa();
+        .px2rem(width,72);
+        .px2rem(height,72);
+        background:url('../../images/common/close-size5.png') center center no-repeat;
+        background-size:100% 100%;
+        .px2rem(bottom,-120);
+        left:50%;
+        transform:translateX(-50%);
+    }
+}

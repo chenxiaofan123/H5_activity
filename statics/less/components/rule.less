@@ -1,0 +1,35 @@
+
+/*活动规则*/
+
+.rule(@bg:#fff3b3,@color:#eb601e){
+  min-height:100%;
+  background-color:@bg;
+
+  color:@color;
+  article{
+    .px2rem(margin-left,50);
+    .px2rem(margin-right,20);
+    .px2rem(margin-top,60);
+    .px2rem(padding-bottom,70);
+    .line{
+      .px2rem(margin-top,30);
+      .px2px(font-size,28);
+      .num{
+        display:inline-block;
+        float:left;
+      }
+      .text{
+        display:block;
+        overflow: hidden;
+      }
+      .line{
+         .px2rem(margin-top,15);
+      }
+    }
+    .line:after{.clear;}
+    .title{
+      .px2px(font-size,36);
+      margin-top:0;
+    }
+  }
+}

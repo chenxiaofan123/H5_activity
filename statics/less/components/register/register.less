@@ -1,0 +1,185 @@
+/**
+*autor:tianyuyan
+*date:2016-9-1
+*param:注册组件
+**/  
+
+
+//通用的button
+.common-button(@bg-color, @height, @font-color, @font-size) {
+  .px2rem(height, @height);
+  .px2rem(line-height, @height);
+  .px2px(font-size, @font-size);
+  font-weight: bold;
+  color: @font-color;
+  background-color: @bg-color;
+  text-decoration: none;
+  text-align: center;
+}
+.input-style(){
+  .px2rem(height, 90); 
+  border: 0px;
+  .px2px(font-size, 30);
+  color:#a3a3a3;
+  .px2rem(padding-left, 30);
+  .px2rem(padding-top, 28);
+  .px2rem(padding-bottom, 28);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.register(@width){
+    //注册完成button
+    .reg-complete {
+        padding: 0 125/75rem;
+        .px2rem(margin-top, 30);
+        a {
+          display: inline-block;
+          border-radius: 5px;
+          .common-button(#ffed7d, 90, #bf2317, 36);
+          width: 100%;
+          text-decoration: none;
+        }
+    }
+    .reg-process-wrapper{ 
+        padding: 0 125/75rem;
+        .input-telephone-wrapper{
+          input {
+            width: 100%;
+            .input-style();
+          }
+        }
+        .code-wrapper {
+            .px2rem(margin-top, 20);  
+            input{
+              width:58%;
+              .input-style(); 
+            }
+            a{
+              float: right;
+              display: inline-block;
+              width: 40%;
+              .common-button(#ffed7d, 90, #bf2317, 28);
+              border-radius: 5px;
+              vertical-align: top;
+            }
+            .send{
+              color:#9e9d97;
+              background-color: #fffce6 !important;
+            } 
+      }
+      .code-tips {
+        color: #fff;
+        .px2rem(margin-top, 20);
+        .send-phone-code{
+            color:#ffed7d;
+            text-decoration: none;
+        }
+        a:visited{
+            color: #ffed7d;
+        }
+      }
+      .protocol-reader {
+        color: #fff;
+        .px2rem(margin-top, 40);
+        .px2rem(margin-bottom, 30);
+        p{
+          color: #fff;
+          .px2rem(line-height, 30);
+          display: inline-block;
+          .check-protocol{
+            color:#ffed7d;
+            text-decoration: none;
+          }
+        }
+        //选择框
+        .check-box {
+          display: inline-block;
+          .px2px(height, 30);
+          .px2px(width, 30);
+          background-color: #ffed7d;
+          border-radius: 2px;
+          position: relative;
+          vertical-align: middle;
+          .check-line {
+            height: 2px;
+            .px2px(width, 20);
+            .px2px(margin-top, 14);
+            .px2rem(margin-left, 9);
+            background-color: #d0a13c;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+          .check-line:before {
+            //箭头的左边 
+            position: absolute;
+            .px2px(top, -4);
+            .px2px(left, -4);
+            content: '';
+            height: 2px;
+            .px2px(width, 9);
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            background-color: #d0a13c;
+          }
+        }
+        .un-checked{
+          background-color: #fff;
+        }  
+      }
+    }
+}
+
+/* 弹窗 */
+.x-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    .alert-cart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+      z-index: 100000;
+      width: 68%;
+      max-width: 750px;
+      //box-shadow: rgba(0, 0, 0, 0.8) 0 0.2em 0.6em;
+      background-color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      padding: 38/75rem 0 50/75rem;
+      .alert-title {
+        .img-wrapper(54, 78);
+        background-image: url("../../statics/images/common/tips.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin:0 auto;
+      }
+      .alert-words {
+        .px2rem(margin-top, 30);
+        .px2rem(margin-bottom, 70);
+        line-height: 1;
+        color: #343434;
+        .px2px(font-size, 30);
+        a{
+          text-decoration: underline;
+        }
+      } 
+      .alert-close a {
+        display: inline-block;
+        .common-button(#fe434d, 60, #ffed7d, 32);
+        .px2rem(width, 280);
+        border-radius: 5px;
+      } 
+    }
+} 
+/*注册*/ 
+.register{
+    .px2rem(margin-top, 60);
+    .register(20);
+}  

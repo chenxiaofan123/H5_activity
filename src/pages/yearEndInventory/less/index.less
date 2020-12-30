@@ -1,0 +1,1441 @@
+
+@import "../../../../statics/less/base/method.less";
+@import "../css/swiper.min.css";
+@import '../css/style.css';
+@import '../css/loading.css';
+@import './pop.less';
+.model-div {
+  &::before {
+    height: 0 !important;
+    width: 100%;
+    content: "";
+    display: block;
+  }
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.yellow{
+  color:#FFAA00;
+}
+.bg-img( @file , @width, @height ) {
+  .px2rem(width, @width);
+  .px2rem(height, @height);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/@{file}");
+}
+.ImgX( @file , @width, @height ) {
+  .px2rem(width, @width);
+  .px2rem(height, @height);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../res/iphoneX/@{file}");
+}
+
+.border(@size,@color) {
+  @bor: @size / 75 * 1rem;
+  border: @bor solid @color;
+}
+[v-cloak] {
+  display: none !important;
+}
+.number-grow-warp{
+  transform: translateZ(0);
+ }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.swiper-wrapper{
+  position: relative;
+}
+//音乐悬浮start
+.isOn{
+  position: absolute;
+  .px2rem(top, 30);
+  .px2rem(right, 5);
+   z-index: 1000;
+  .bg-img("music.png",82,82);
+   -webkit-animation: rotating 1.8s linear infinite;
+  animation: rotating 1.8s linear infinite;
+}
+
+@keyframes rotating {
+  from { -webkit-transform: rotate(0) }
+  to { -webkit-transform: rotate(360deg) }
+}
+@-webkit-keyframes rotating {
+  from { -webkit-transform: rotate(0) }
+  to { -webkit-transform: rotate(360deg) }
+}
+
+
+.isOff{
+   position: absolute;
+  .px2rem(top, 30);
+  .px2rem(right, 5);
+   z-index: 1000;
+  .bg-img("noMusic.png",82,82);
+}
+//音乐悬浮end
+.index-page {
+  background:#FFF1CD !important;
+  height:100%;
+  overflow-y:hidden;
+  .Music{
+    .musicVideo{
+      position: absolute;
+      .px2rem(top, 10);
+      .px2rem(right, 0);
+      z-index: 1000;
+      img{
+        .px2rem(width, 82);
+        .px2rem(height, 82);
+      }
+    }
+    
+  }
+  .noReport{
+    .noReportfirst{
+      height:100%;
+      .firstTop{
+          .bg-img("indexTop.png",750,750);
+          .px2rem(padding-top, 181);
+          .firstText{
+           .bg-img("noreport.png",513,221);
+           margin:0 auto;
+          }
+      }
+      .firstButtom{
+        .bg-img("noReportButton.png",600,217);
+        .px2rem(line-height, 320);
+        font-family: "PingFangSC-Bold";
+         margin:0 auto;
+         .px2rem(margin-top, -100);
+        .px2rem(font-size, 32);
+        .px2rem(bottom, 70);
+        color: #35c8e6;
+        text-align: center;
+      }
+      .firstBottom{
+          .bg-img("noReportBottom.png",750,378);
+          position:fixed;
+          bottom:0;
+          left:0;
+      }
+    }
+  }
+  .first{
+    height:100%;
+    .firstTop{
+        .bg-img("indexTop.png",750,750);
+        .px2rem(padding-top, 113);
+        .firstText{
+         .bg-img("indexSlogn.png",520,313);
+         margin:0 auto;
+        }
+    }
+    .firstBottom{
+        .bg-img("indexBottom.png",750,764);
+        position:fixed;
+        bottom:0;
+        left:0;
+        .firstButtom{
+          .px2rem(width, 400);
+          .px2rem(height, 100);
+           position:fixed;
+           font-weight:bold;
+          .px2rem(line-height, 90);
+          .px2rem(border-radius, 50);
+          border: 1.5px solid #FFFFFF;
+          font-family: "PingFangSC-Bold";
+          .px2rem(font-size, 32);
+          .px2rem(bottom, 70);
+           left:23.5%;
+          color: #FFFFFF;
+          text-align: center;
+          text-decoration: none;
+        }
+    }
+     
+  }
+  .part1{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+       position: relative;
+        .bg-img("textbg.png",750,964);
+        .px2rem(padding-top, 52);
+      .part1Text{
+        .bg-img("text1.png",732,882);
+         margin:0 auto;
+         .px2rem(padding-left, 87);
+         .px2rem(padding-right, 80);
+        .title{
+          .px2rem(padding-top, 135);
+           font-family: "PingFangSC-Medium";
+           .px2rem(font-size, 36);
+           color: #333;
+           font-weight:500;
+        }
+        .textPart{
+           font-family: "Arita-CZS";
+           .px2rem(margin-top, 56);
+           p{
+             &:first-child{
+              font-family: "DIN-Bold";
+               color: #FFAA00;
+               .px2rem( font-size, 40);
+               span{
+                .px2rem( font-size, 40);
+               }
+             }
+             span{
+              .px2rem( font-size, 34);
+              font-weight: bold;
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+        }
+      }
+      .part1yezi{
+        .bg-img("yezi1.png",128,158);
+          position: absolute;
+          right:0;
+          z-index:99;
+        .px2rem(bottom, 80);
+      }
+    }
+    .part1Bottom{
+       .bg-img("bottom1.png",750,377);
+       position: absolute;
+       bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+  .part2{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+       position: relative;
+        .bg-img("textbg.png",750,964);
+        .px2rem(padding-top, 52);
+      .part1Text{
+        .bg-img("text2.png",732,1050);
+         margin:0 auto;
+        
+        .part2Money{
+          .px2rem(padding-top, 128);
+          .px2rem(padding-left, 87);
+         .px2rem(padding-right, 80);
+           .px2rem(font-size, 30);
+           color: #333;
+           span{
+             color: #FFAA00;
+            .px2rem(font-size, 50);
+            font-family:"DIN-Bold";
+           }
+        }
+        .textPart{
+           .px2rem(margin-top, 56);
+           .px2rem(padding-left, 87);
+           .px2rem(padding-right, 80);
+           p{
+             span{
+              .px2rem( font-size, 40);
+              font-family:"DIN-Bold";
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+        }
+      }
+      .part2Echart{
+        position: relative;
+        .container2Tip{
+          width:29%;
+          position: absolute;
+          .px2rem( right,100);
+          .px2rem( top, 70);
+          z-index: 100;
+         div{
+           .px2rem(padding-top, 16);
+           .px2rem(padding-bottom, 16);
+           border-bottom: 1px dotted #D1D1D1;
+           &:last-child{
+             border-bottom:none;
+           }
+           span{
+             .px2rem(margin-right, 10);
+             font-family: "Arita-CZS";
+             .px2rem(font-size, 28);
+             color: #4A4A4A;
+             display: block;
+             float: left;
+             &:last-child{
+               float:right;
+               .px2rem(margin-right, 0);
+               font-family:"DIN-Bold";
+             }
+             
+           }
+           .tip1{
+             .px2rem(width, 27);
+             .px2rem(height, 27);
+             background: #FFEC66 ;
+             .px2rem(margin-top,6);
+           }
+           .tip2{
+             .px2rem(width, 27);
+             .px2rem(height, 27);
+             background:#FFBD00  ;
+             .px2rem(margin-top, 6);
+           }
+           .tip3{
+             .px2rem(width, 27);
+             .px2rem(height, 27);
+             background:#6CD7FF ;
+             .px2rem(margin-top, 6);
+           }
+         }
+       }
+      }
+      .part1yezi{
+        .bg-img("yezi2.png",111,218);
+          position: absolute;
+          right:0;
+          z-index:99;
+        .px2rem(top, 160);
+      }
+    }
+    .part1Bottom{
+       .bg-img("bottom2.png",750,377);
+       position: absolute;
+        bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+  .part3{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+       position: relative;
+        .bg-img("textbg.png",750,964);
+        .px2rem(padding-top, 52);
+      .part1Text{
+        .bg-img("text3.png",732,950);
+        .px2rem(padding-left, 87);
+        .px2rem(padding-right, 80);
+         margin:0 auto;
+        .part2Money{
+          .px2rem(padding-top, 128);
+          
+           .px2rem(font-size, 30);
+           color: #333;
+           span{
+             color: #FFAA00;
+            .px2rem(font-size, 50);
+            font-family:"DIN-Bold";
+           }
+        }
+        .textPart{
+           .px2rem(margin-top, 76);
+           p{
+             span{
+              .px2rem( font-size, 40);
+              font-family:"DIN-Bold";
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+        }
+        .part3Slogn{
+          .px2rem(margin-top, 90);
+           font-family: "PingFangSC-Medium";
+           .px2rem(font-size, 30);
+           font-weight: bold;
+            color: #333333;
+            .line{
+               .px2rem(margin-right, 20);
+               .px2rem(margin-top, 20);
+                .px2rem(width, 110);
+                 .px2rem(height, 2);
+                 background: #333;
+            }
+        }
+    
+      }
+
+      .part1yezi{
+        .bg-img("yezi3.png",154,208);
+          position: absolute;
+          right:0;
+          z-index:99;
+        .px2rem(top, 200);
+      }
+    }
+    .part1Bottom{
+       .bg-img("bottom3.png",750,377);
+       position: absolute;
+       bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+  .part4{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+       position: relative;
+        .bg-img("textbg.png",750,964);
+        .px2rem(padding-top, 52);
+        .part4Img1{
+          .bg-img("text43.png",732,1000);
+          margin:0 auto;
+        }
+        .part4Img2{
+          .bg-img("text42.png",732,1000);
+           margin:0 auto;
+        }
+        .part4Img3{
+          .bg-img("text41.png",732,1000);
+          margin:0 auto;
+        }
+        .part4tImg4{
+          .bg-img("text4.png",732,1000);
+           margin:0 auto;
+        }
+       .part1Text{
+        .part2Money{
+          .px2rem(padding-top, 128);
+           font-family:"DIN-Bold";
+           .px2rem(padding-left, 87);
+           .px2rem(padding-right, 80);
+           .px2rem(font-size, 30);
+           color: #333;
+           span{
+             color: #FFAA00;
+            .px2rem(font-size, 50);
+            font-family:"DIN-Bold";
+           }
+        }
+      
+        .textPart{
+           .px2rem(margin-top, 76);
+           p{
+             span{
+              .px2rem( font-size, 40);
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+        }
+        .partMoney{
+          .container4Tip{
+            width:29%;
+            position: absolute;
+            .px2rem( right, 100);
+            .px2rem( top, 30);
+            z-index: 100;
+           div{
+             .px2rem(padding-top, 10);
+             .px2rem(padding-bottom, 10);
+             span{
+               .px2rem(margin-right, 20);
+               font-family: Arita-CZS;
+               .px2rem(font-size, 28);
+               color: #4A4A4A;
+               display: block;
+               float: left;
+               &:last-child{
+                 float:right;
+                 .px2rem(margin-right, 0);
+                 font-family:"DIN-Bold";
+               }
+               
+             }
+             .tip1{
+               .px2rem(width, 27);
+               .px2rem(height, 27);
+               background: #FFEB58 ;
+               .px2rem(margin-top, 6);
+             }
+             .tip2{
+               .px2rem(width, 27);
+               .px2rem(height, 27);
+               background:#FFB200 ;
+               .px2rem(margin-top, 6);
+             }
+             .tip3{
+               .px2rem(width, 27);
+               .px2rem(height, 27);
+               background:#6CD7FF ;
+               .px2rem(margin-top, 6);
+             }
+             .tip4{
+              .px2rem(width, 27);
+              .px2rem(height, 27);
+              background:#FF7700 ;
+              .px2rem(margin-top, 10);
+            }
+            .tip5{
+              .px2rem(width, 27);
+              .px2rem(height, 27);
+              background:#39E77A ;
+              .px2rem(margin-top, 6);
+            }
+           }
+         }
+        }
+        .textProperty{
+          .px2rem(padding-left, 87);
+          .px2rem(padding-right, 80);
+            font-family: Arita-CZS;
+            .px2rem( font-size, 30);
+            color: #333333;
+            .px2rem( line-height, 48);
+            .px2rem( margin-top, 12);
+        }
+        .part3Slogn{
+          .px2rem(padding-left, 87);
+          .px2rem(padding-right, 80);
+              .px2rem(margin-top, 100);
+            font-family: "PingFangSC-Medium";
+            .px2rem(font-size, 30);
+            font-weight: bold;
+             color: #333333;
+             .line{
+                .px2rem(margin-right, 20);
+                .px2rem(margin-top, 20);
+                 .px2rem(width, 110);
+                  .px2rem(height, 2);
+                  background: #333;
+             }
+         }
+       
+      }
+     
+    }
+    .part1Bottom{
+       .bg-img("bottom4.png",750,377);
+       position: absolute;
+       bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+  .part5{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+        position: relative;
+        .bg-img("textbg.png",750,964);
+        .px2rem(padding-top, 52);
+      .part1Text{
+        .bg-img("text5.png",732,832);
+        .px2rem(padding-left, 87);
+        .px2rem(padding-right, 80);
+         margin:0 auto;
+        .part2Money{
+          .px2rem(padding-top, 128);
+          font-family:"DIN-Bold";
+           .px2rem(font-size, 30);
+           color: #333;
+           span{
+             color: #FFAA00;
+            .px2rem(font-size, 50);
+            font-family:"DIN-Bold";
+           }
+        }
+        .textPart{
+           .px2rem(margin-top, 76);
+           p{
+             span{
+              .px2rem( font-size, 40);
+              font-family:"DIN-Bold";
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+        }
+        .textProperty{
+            font-family: Arita-CZS;
+            .px2rem( font-size, 30);
+            color: #333333;
+            .px2rem( line-height, 48);
+            .px2rem( margin-top, 12);
+        }
+        .part3Slogn{
+             .px2rem(margin-top, 40);
+            font-family: "PingFangSC-Medium";
+            .px2rem(font-size, 30);
+            font-weight: bold;
+             color: #333333;
+             .line{
+                .px2rem(margin-right, 20);
+                .px2rem(margin-top, 20);
+                 .px2rem(width, 110);
+                  .px2rem(height, 2);
+                  background: #333;
+             }
+         }
+       
+      }
+     
+    }
+    .part1yezi{
+        .bg-img("yezi2.png",111,218);
+          position: absolute;
+          right:0;
+          z-index:99;
+        .px2rem(top, 160);
+      }
+    .part1Bottom{
+       .bg-img("bottom5.png",750,377);
+       position: absolute;
+       bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+
+  .part6{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+       position: relative;
+        .bg-img("textbg.png",750,972);
+        .px2rem(padding-top, 52);
+      .part1Text{
+        .bg-img("text6.png",732,972);
+        .px2rem(padding-left, 87);
+        .px2rem(padding-right, 80);
+         margin:0 auto;
+        .part2Money{
+          .px2rem(padding-top, 128);
+          font-family:"DIN-Bold";
+           .px2rem(font-size, 30);
+           color: #333;
+           span{
+             color: #FFAA00;
+            .px2rem(font-size, 50);
+            font-family:"DIN-Bold";
+           }
+        }
+        .textPart{
+           .px2rem(margin-top, 56);
+           p{
+             span{
+              .px2rem( font-size, 40);
+              font-family:"DIN-Bold";
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+        }
+        .friendImg{
+          .bg-img("member.png",476,283);
+          position: absolute;
+          .px2rem(bottom, 152);
+          .px2rem(left, 135);
+        }
+        .textProperty{
+            font-family: Arita-CZS;
+            .px2rem( font-size, 30);
+            color: #333333;
+            .px2rem( line-height, 48);
+            .px2rem( margin-top, 12);
+        }
+      }
+     
+    }
+    .part1Bottom{
+       .bg-img("bottom6.png",750,377);
+       position: absolute;
+       bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+
+  .part7{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+       position: relative;
+        .bg-img("textbg.png",750,964);
+        .px2rem(padding-top, 52);
+      .part1Text{
+        .bg-img("text7.png",732,1000);
+         margin:0 auto;
+         .px2rem(padding-left, 87);
+         .px2rem(padding-left, 80);
+        .part2Money{
+          .px2rem(padding-top, 128);
+           .px2rem(font-size, 30);
+           color: #333;
+           span{
+             color: #FFAA00;
+            .px2rem(font-size, 50);
+            font-family:"DIN-Bold";
+           }
+        }
+        .textPart{
+           .px2rem(margin-top, 76);
+           p{
+             span{
+              .px2rem( font-size, 40);
+              font-weight: bold;
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 18);
+             .px2rem(line-height, 48);
+           }
+           .giftjiezhi{
+            .bg-img("zuanjie.png",213,218);
+            position: absolute;
+            .px2rem(right, 90);
+            .px2rem(bottom, 50);
+          }
+          .giftka{
+            .bg-img("ka.png",309,211);
+            position: absolute;
+            .px2rem(right, 90);
+            .px2rem(bottom, 50);
+          }
+          .giftiphoneXS{
+            .bg-img("iphonex.png",128,253);
+            position: absolute;
+            .px2rem(right, 103);
+            .px2rem(bottom, 90);
+          }
+          .giftjintiao{
+            .bg-img("jintiao.png",230,128);
+            position: absolute;
+            .px2rem(right, 103);
+            .px2rem(bottom, 90);
+          }
+           
+        }
+        .textProperty{
+            font-family: Arita-CZS;
+            .px2rem( font-size, 30);
+            color: #333333;
+            .px2rem( line-height, 48);
+            .px2rem( margin-top, 12);
+        }
+      }
+     
+    }
+    .part1Bottom{
+       .bg-img("bottom7.png",750,377);
+       position: absolute;
+        bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+
+  .part8{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+      .px2rem(padding-top, 52);
+      .bg-img("textbg.png",750,964);
+       position: relative;
+        .part1Text{
+          .px2rem(padding-top, 108);
+        .bg-img("text8.png",732,1008);
+         margin:0 auto;
+        .textPart{
+           .px2rem(margin-left, 87);
+           p{
+             span{
+              font-family: "DIN-Bold";
+              .px2rem(font-size, 50);
+             }
+             font-family:"Arita-CZS";
+             .px2rem(font-size, 30);
+              color: #333;
+              .px2rem(margin-bottom, 20);
+             .px2rem(line-height, 48);
+           }
+        }
+        .container8Tip{
+           width:43%;
+           position: absolute;
+           right:30px;
+           top:25px;
+           z-index: 100;
+          div{
+            .px2rem(padding-top, 20);
+            .px2rem(padding-bottom, 20);
+            border-bottom: 1px dotted #D1D1D1;
+            &:last-child{
+              border-bottom:none;
+            }
+            span{
+              .px2rem(margin-right, 20);
+              font-family: Arita-CZS;
+              .px2rem(font-size, 30);
+              color: #4A4A4A;
+              display: block;
+              float: left;
+              &:last-child{
+                 float:right;
+                .px2rem(margin-right, 0);
+                font-family:"DIN-Bold";
+              }
+              &:nth-child(2){
+                .px2rem(margin-right, 0);
+              }
+              
+            }
+            .tip1{
+              .px2rem(width, 27);
+              .px2rem(height, 27);
+              background: #FFEC66 ;
+              .px2rem(margin-top, 8);
+            }
+            .tip2{
+              .px2rem(width, 27);
+              .px2rem(height, 27);
+              background:#FFBD00 ;
+              .px2rem(margin-top, 8);
+            }
+            .tip3{
+              .px2rem(width, 27);
+              .px2rem(height, 27);
+              background:#6CD7FF;
+              .px2rem(margin-top, 8);
+            }
+          }
+        }
+        .financialIncome{
+          border-top: 1px dotted #D1D1D1;
+          .px2rem(width, 600);
+           margin:0 auto;
+           .px2rem(padding-top, 30);
+           .px2rem(padding-bottom, 18);
+          border-bottom: 1px dotted #D1D1D1;
+          .IncomList div{
+            width: 33%;
+            font-family: "Arita-CZS";
+            .px2rem(font-size, 32);
+            color: #4A4A4A;
+            text-align: center;
+            &:nth-child(2){
+              border-left: 1px dotted #D1D1D1;
+              border-right: 1px dotted #D1D1D1;
+            }
+            p{
+              .px2rem(margin-bottom, 12);
+              &:last-child{
+                font-family:"DIN-Bold";
+              }
+            }
+          }
+          .incomTip{
+            text-align: center;
+            font-family: "Arita-CZS";
+            .px2rem(font-size, 24);
+            .px2rem(margin-top, 20);
+            color: #9B9B9B;
+          }
+         
+        }
+        .incomBottom{
+          .px2rem(margin-top, 20);
+          text-align: center;
+          div{
+            .px2rem(margin-bottom,10 );
+            font-family: "Arita-CZS";
+            .px2rem(font-size, 32);
+            span{
+              .px2rem(font-size, 40);
+            }
+            &:last-child{
+              font-family: "DIN-Bold";
+            }
+          }
+        }
+      }
+     
+    }
+    .part1Bottom{
+       .bg-img("bottom8.png",750,377);
+       position: absolute;
+       bottom:0;
+       left:0;
+       z-index: -1;
+       .bottomYuce{
+         text-align: center;
+         width: 100%;
+         font-family:"DIN-Bold";
+         .px2rem(font-size, 32);
+          color: #FFFFFF;
+          letter-spacing: 1.28px;
+          text-shadow: 0 2px 14px rgba(230,0,0,0.50);
+          position: absolute;
+          .px2rem(bottom, 80);
+          left:0;
+       }
+    }
+  }
+
+  .part9{
+    position: relative;
+    height: 100%;
+    .partTextAll{
+      .px2rem(padding-top, 20);
+      .bg-img("textbg.png",750,964);
+       position: relative;
+        .part1Text{
+          text-align:center;
+          .px2rem(padding-top, 240);
+          .bg-img("text9.png",718,1116);
+           margin:0 auto;
+           .shareImg1 {
+            .bg-img("share1.png",550,360);
+             margin: 0 auto;
+          }
+          .shareImg2 {
+            .bg-img("share2.png",550,360);
+             margin: 0 auto;
+          }
+          .shareImg3 {
+            .bg-img("share3.png",550,360);
+             margin: 0 auto;
+          }
+          .shareImg4 {
+            .bg-img("share4.png",550,360);
+             margin: 0 auto;
+          }
+          .shareImgText1 {
+            .bg-img("shareText1.png",550,74);
+             margin: 0 auto;
+            .px2rem(margin-top, 40);
+            .px2rem(margin-bottom, 20);
+          }
+          .shareImgText2 {
+            .bg-img("shareText2.png",550,74);
+            margin: 0 auto;
+            .px2rem(margin-top, 40);
+            .px2rem(margin-bottom, 20);
+          }
+          .shareImgText3 {
+            .bg-img("shareText3.png",550,74);
+            margin: 0 auto;
+            .px2rem(margin-top, 40);
+            .px2rem(margin-bottom, 20);
+          }
+           .shareImgText4 {
+            .bg-img("shareText4.png",550,74);
+            margin: 0 auto;
+            .px2rem(margin-top, 40);
+            .px2rem(margin-bottom, 20);
+          }
+            
+           .shareText{
+            font-family:"PingFang-SC-Light";
+            .px2rem(font-size, 30);
+            color: #36363A;
+           }
+           .shareButtom{
+             .shareButtonOne{
+              font-family:"PingFang-SC-Semibold";
+              .bg-img("button.png",370,90);
+               margin:0 auto;
+               .px2rem(margin-top, 64);
+              .px2rem(margin-bottom, 34);
+              .px2rem(line-height, 90);
+              .px2rem(font-size, 30);
+              text-align:center;
+              color:#fff;
+             }
+             .shareButtonTwo{
+               .px2rem(width, 175);
+               margin:0 auto;
+               font-family:"PingFang-SC-Light";
+               .backImg{
+                .bg-img("goBack.png",30,30);
+                .px2rem(margin-top, 8);
+                 display: block;
+                 float: left;
+                }
+                a{
+                  font-family:"PingFang-SC-regular";
+                }
+                text-decoration: none;
+              .px2rem(font-size, 30);
+              color: #36363A;
+             }
+           }
+        
+        }
+     
+    }
+    .part9yezi{
+      .bg-img("yezi4.png",220,290);
+        position: absolute;
+        left:0;
+        z-index:99;
+      .px2rem(bottom, 0);
+    }
+    .part1Bottom{
+       .bg-img("bottom9.png",750,360);
+       position: absolute;
+        bottom:0;
+       left:0;
+       z-index: -1;
+    }
+  }
+
+ .part1,.part2,.part3,.part4,.part5,.part6,.part7,.part8{
+    /**/
+  .arrow-box{
+    position: absolute;
+    .px2rem(bottom, 28);
+    left: 25%;
+    right: 0;
+    width: 50%;
+    z-index: 900;
+    }
+    #array{
+      z-index:999;-webkit-animation: start 1.5s infinite ease-in-out;
+      display:block;
+    margin: 15px  auto 0 auto;
+    width: 25;
+    height: 36px;
+    z-index: 999;
+    }
+  } 
+
+}
+
+/*mate7*/
+@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 3){
+  .index-page .part9 .partTextAll .part1Text{
+    .bg-img("text9.png",718,1000);
+  }
+ }
+
+/* iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+  .index-page .part8 .part1Bottom .bottomYuce{
+    .px2rem(bottom, 50);
+  }
+  .index-page .part8 .partTextAll .part1Text .incomBottom{
+    .px2rem(margin-top, 10);
+    div{
+      .px2rem(margin-bottom, 0);
+    }
+  }
+  .index-page .part8 .partTextAll .part1Text .container8Tip{
+    top:25px;
+    right:25px;
+  }
+  .index-page .part2 .partTextAll .part2Echart .container2Tip{
+    position: absolute;
+    .px2rem( right,100);
+    .px2rem( top, 100);
+    z-index: 100;
+  }
+  .index-page .part4 .partTextAll .part1Text .partMoney .container4Tip{
+    position: absolute;
+    .px2rem( right, 80);
+    .px2rem( top, 55);
+    z-index: 100;
+  }
+  .index-page .part8 .partTextAll .part1Text .financialIncome{
+    .px2rem(margin-top, -30);
+  }
+  .index-page .part8 .partTextAll .part1Text{
+    .px2rem(padding-top, 108);
+    .bg-img("text8.png",732,1020);
+     margin:0 auto;
+  }
+}
+
+//iphoneX、iphoneXs
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  
+  .index-page .part1 .partTextAll{
+    .px2rem(padding-top, 110);
+    .part1Text{
+      .ImgX("textx1.png",732,1027);
+    }
+  }
+ .index-page .part2 .partTextAll {
+   .px2rem(padding-top, 110);
+   .part1Text{
+    .ImgX("textx2.png",732,1032);
+   }
+ }
+ .index-page .part3 .partTextAll{
+  .px2rem(padding-top, 110);
+    .part1Text{
+      .ImgX("textx3.png",732,992);
+    }
+ } 
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx4.png",732,1022);
+   }
+ } 
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4Img3{
+    .ImgX("textx41.png",732,1022);
+   }
+ }
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4tImg4{
+    .ImgX("textx4.png",732,1022);
+   }
+ }
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4Img2{
+    .ImgX("textx42.png",732,1022);
+   }
+ } 
+ .index-page .part4 .partTextAll {
+  .px2rem(padding-top, 110);
+  .part4Img1{
+    .ImgX("textx43.png",732,1022);
+   }
+ }
+ .index-page .part5 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx5.png",732,992);
+   }
+ }
+ .index-page .part6 .partTextAll {
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx6.png",732,1002);
+    .friendImg{
+      .px2rem(bottom, 70);
+    }
+   }
+ }
+ .index-page .part7 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx7.png",732,1002);
+   }
+
+ } 
+ .index-page .part8 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx8.png",718,1028);
+   }
+ } 
+ .index-page .part8 .part1Bottom .bottomYuce{
+  .px2rem(bottom, 160);
+ }
+ .index-page .part9 .partTextAll{
+  .px2rem(padding-top, 40);
+  .part1Text{
+    .px2rem(padding-top, 250);
+    .ImgX("textx9.png",718,1216);
+    .shareImgText1,.shareImgText2,.shareImgText3,.shareImgText4{
+      .px2rem(margin-top, 60);
+    }
+    .shareButtom{
+      .shareButtonOne{
+        .px2rem(margin-top, 104);
+      }
+    }
+   }
+ } 
+
+ .index-page .part1 .arrow-box,
+ .index-page .part2 .arrow-box,
+ .index-page .part3 .arrow-box,
+ .index-page .part4 .arrow-box,
+ .index-page .part5 .arrow-box,
+ .index-page .part6 .arrow-box,
+ .index-page .part7 .arrow-box,
+ .index-page .part8 .arrow-box{
+  .px2rem(bottom, 60);
+ }
+
+.index-page .first .firstTop {
+  .px2rem(padding-top, 200);
+}
+  
+
+}
+
+
+
+//iphone Xs Max
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .index-page .part1 .partTextAll{
+    .px2rem(padding-top, 110);
+    .part1Text{
+      .ImgX("textx1.png",732,1027);
+    }
+  }
+ .index-page .part2 .partTextAll {
+   .px2rem(padding-top, 110);
+   .part1Text{
+    .ImgX("textx2.png",732,1032);
+   }
+ }
+ .index-page .part3 .partTextAll{
+  .px2rem(padding-top, 110);
+    .part1Text{
+      .ImgX("textx3.png",732,992);
+    }
+ } 
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx4.png",732,1022);
+   }
+ } 
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4Img3{
+    .ImgX("textx41.png",732,1022);
+   }
+ }
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4tImg4{
+    .ImgX("textx4.png",732,1022);
+   }
+ }
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4Img2{
+    .ImgX("textx42.png",732,1022);
+   }
+ } 
+ .index-page .part4 .partTextAll {
+  .px2rem(padding-top, 110);
+  .part4Img1{
+    .ImgX("textx43.png",732,1022);
+   }
+ }
+ .index-page .part5 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx5.png",732,992);
+   }
+ }
+ .index-page .part6 .partTextAll {
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx6.png",732,1002);
+    .friendImg{
+      .px2rem(bottom, 70);
+    }
+   }
+ }
+ .index-page .part7 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx7.png",732,1002);
+   }
+
+ } 
+ .index-page .part8 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx8.png",718,1028);
+   }
+ } 
+ .index-page .part8 .part1Bottom .bottomYuce{
+  .px2rem(bottom, 160);
+ }
+ .index-page .part9 .partTextAll{
+  .px2rem(padding-top, 40);
+  .part1Text{
+    .px2rem(padding-top, 250);
+    .ImgX("textx9.png",718,1216);
+    .shareImgText1,.shareImgText2,.shareImgText3,.shareImgText4{
+      .px2rem(margin-top, 60);
+    }
+    .shareButtom{
+      .shareButtonOne{
+        .px2rem(margin-top, 104);
+      }
+    }
+   }
+ } 
+ .index-page .part1 .arrow-box,
+ .index-page .part2 .arrow-box,
+ .index-page .part3 .arrow-box,
+ .index-page .part4 .arrow-box,
+ .index-page .part5 .arrow-box,
+ .index-page .part6 .arrow-box,
+ .index-page .part7 .arrow-box,
+ .index-page .part8 .arrow-box{
+  .px2rem(bottom, 60);
+ }
+.index-page .first .firstTop {
+  .px2rem(padding-top, 200);
+}
+  
+}
+
+//iphone XR
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .index-page .part1 .partTextAll{
+    .px2rem(padding-top, 110);
+    .part1Text{
+      .ImgX("textx1.png",732,1027);
+    }
+  }
+ .index-page .part2 .partTextAll {
+   .px2rem(padding-top, 110);
+   .part1Text{
+    .ImgX("textx2.png",732,1032);
+   }
+ }
+ .index-page .part3 .partTextAll{
+  .px2rem(padding-top, 110);
+    .part1Text{
+      .ImgX("textx3.png",732,992);
+    }
+ } 
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx4.png",732,1022);
+   }
+ } 
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4Img3{
+    .ImgX("textx41.png",732,1022);
+   }
+ }
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4tImg4{
+    .ImgX("textx4.png",732,1022);
+   }
+ }
+ .index-page .part4 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part4Img2{
+    .ImgX("textx42.png",732,1022);
+   }
+ } 
+ .index-page .part4 .partTextAll {
+  .px2rem(padding-top, 110);
+  .part4Img1{
+    .ImgX("textx43.png",732,1022);
+   }
+ }
+ .index-page .part5 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx5.png",732,992);
+   }
+ }
+ .index-page .part6 .partTextAll {
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx6.png",732,1002);
+    .friendImg{
+      .px2rem(bottom, 70);
+    }
+   }
+ }
+ .index-page .part7 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx7.png",732,1002);
+   }
+
+ } 
+ .index-page .part8 .partTextAll{
+  .px2rem(padding-top, 110);
+  .part1Text{
+    .ImgX("textx8.png",718,1028);
+   }
+ } 
+ .index-page .part8 .part1Bottom .bottomYuce{
+  .px2rem(bottom, 160);
+ }
+ 
+ .index-page .part9 .partTextAll{
+  .px2rem(padding-top, 40);
+  .part1Text{
+    .px2rem(padding-top, 250);
+    .ImgX("textx9.png",718,1216);
+    .shareImgText1,.shareImgText2,.shareImgText3,.shareImgText4{
+      .px2rem(margin-top, 60);
+    }
+    .shareButtom{
+      .shareButtonOne{
+        .px2rem(margin-top, 104);
+      }
+    }
+   }
+ } 
+ .index-page .part1 .arrow-box,
+ .index-page .part2 .arrow-box,
+ .index-page .part3 .arrow-box,
+ .index-page .part4 .arrow-box,
+ .index-page .part5 .arrow-box,
+ .index-page .part6 .arrow-box,
+ .index-page .part7 .arrow-box,
+ .index-page .part8 .arrow-box{
+  .px2rem(bottom, 60);
+ }
+.index-page .first .firstTop {
+  .px2rem(padding-top, 200);
+}
+}
+

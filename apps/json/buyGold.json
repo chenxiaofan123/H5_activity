@@ -1,0 +1,11 @@
+
+{
+  "data":{
+    "realPrice":230.00,
+    "realGoldWeight":4.000,
+    "realMoney":2541.00
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

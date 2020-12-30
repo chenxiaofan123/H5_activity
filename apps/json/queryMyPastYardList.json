@@ -1,0 +1,19 @@
+{
+  "data": {
+    "pastYardList":[
+        {
+        	"lotteryCode":"0001",
+	        "lotteryName":"一元抢金条",
+	        "lotteryNo":"00011234" 
+        },
+         {
+          "lotteryCode":"0003",
+          "lotteryName":"一元抢金条",
+          "lotteryNo":"00011235" 
+        }  
+       ]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

@@ -1,0 +1,59 @@
+{
+  "data":{
+   "winningList":[{
+     "telephone":"123****0123",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"50元现金",
+     "prizeType":13
+   },{
+     "telephone":"123****0000",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"500元现金",
+     "prizeType":14
+   },{
+     "telephone":"123****0001",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"5000元现金",
+     "prizeType":15
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"1毫克红包",
+     "prizeType":9
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"10毫克红包",
+     "prizeType":2
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"5毫克红包",
+     "prizeType":1
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"2毫克红包",
+     "prizeType":12
+   },
+   {
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"50毫克红包",
+     "prizeType":6
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"2000元现金",
+     "prizeType":16
+   },{
+     "telephone":"123****0002",
+     "winningTime":"2016-09-02 12:23:43",
+     "prizeName":"200元现金",
+     "prizeType":17
+   }]
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+}

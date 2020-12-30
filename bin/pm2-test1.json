@@ -1,0 +1,15 @@
+{
+  "name"            : "h5-gbanker-activity",  
+  "script"          : "bin/www",
+  "instances"       :2,
+  "error_file"      : "/data/logs/app/h5GbankerActivity.err.log",
+  "out_file"        : "/data/logs/app/h5GbankerActivity.log",
+  "watch"           :true,
+  "merge_logs"      : true,
+  "node_args"       : "--harmony",
+  "time":false,
+  "env": {
+    "PORT": "8201",
+    "env":"test"
+  }
+}
