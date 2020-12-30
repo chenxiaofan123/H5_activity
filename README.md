@@ -1,6 +1,6 @@
-# y
+# tips
 
-> y
+> 此项目为webpack 打包的多页面项目 主要技术框架为 vue+koa1+webpack
 
 ## Build Setup
 
